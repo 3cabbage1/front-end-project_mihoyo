@@ -48,4 +48,7 @@ main {
   top: -250px;
   left: 200px;
 }
+h2 {
+  color: rgb(166, 166, 166);
+}
 </style>
