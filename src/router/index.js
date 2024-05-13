@@ -21,7 +21,7 @@ const router = createRouter({
     //   component: () => import('../views/AboutView.vue')
     // }
     {
-      path: '/aside1',
+      path: '/',
       name: 'aside1',
       component: MainHome
     },

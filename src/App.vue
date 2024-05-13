@@ -12,7 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
       <nav>
         <ul>
-          <RouterLink to="/aside1">首页</RouterLink>
+          <RouterLink to="/">首页</RouterLink>
           <RouterLink to="/aside2">产品信息</RouterLink>
           <RouterLink to="/aside3">了解我们</RouterLink>
           <RouterLink to="/aside4">加入我们</RouterLink>
