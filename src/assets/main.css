@@ -33,6 +33,7 @@ a,
     padding: 0 2rem;
   }
 } */
+/* 网格 */
 .bdgrid {
   height: 100%;
   width: 100%;
@@ -62,7 +63,7 @@ a,
   -moz-background-size: 20px 20px;
   background-size: 20px 20px;
 }
-
+/* 背景色 */
 .bdkgc {
   opacity: 0.9;
   width: 100%;

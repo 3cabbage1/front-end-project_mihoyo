@@ -1,0 +1,114 @@
+<script setup>
+function showDetail(title, image, description) {
+  var detailDiv = document.getElementById('detail')
+  detailDiv.innerHTML =
+    '<h1>' +
+    title +
+    '</h1>' +
+    '<img src="' +
+    image +
+    '" alt="' +
+    title +
+    '" style="max-width: 100%; height: auto;">' +
+    '<p>' +
+    description +
+    '</p>'
+  detailDiv.style.display = 'block'
+}
+</script>
+<template>
+  <body>
+    <div class="icons-container">
+      <div
+        class="icon"
+        style="background-image: url('benghuaixueyuan2tubiao.png')"
+        @click="showDetail('产品1详细介绍', 'benghuaixueyuan2.png', '这是产品1的描述。')"
+      ></div>
+      <div
+        class="icon"
+        style="background-image: url('benghuaisantubiao.png')"
+        @click="showDetail('产品1详细介绍', 'benghuaisan.png', '这是产品1的描述。')"
+      ></div>
+      <div
+        class="icon"
+        style="background-image: url('weidingshijainbutubiao.png')"
+        @click="showDetail('产品1详细介绍', 'weidingshijianbu.png', '这是产品1的描述。')"
+      ></div>
+      <div
+        class="icon"
+        style="background-image: url('nidiedetubiao.png')"
+        @click="showDetail('产品1详细介绍', 'nidie.png', '这是产品1的描述。')"
+      ></div>
+      <div
+        class="icon"
+        style="background-image: url('tiedaotubiao.png')"
+        @click="showDetail('产品1详细介绍', 'tiedao.png', '这是产品1的描述。')"
+      ></div>
+      <div
+        class="icon"
+        style="background-image: url('juequlingtubiao.png')"
+        @click="showDetail('产品1详细介绍', 'juequling.png', '这是产品1的描述。')"
+      ></div>
+      <div
+        class="icon"
+        style="background-image: url('miyoushetubiao.png')"
+        @click="showDetail('产品1详细介绍', 'miyoushe.png', '这是产品1的描述。')"
+      ></div>
+      <div
+        class="icon"
+        style="background-image: url('rengongzhuomiantubiao.png')"
+        @click="showDetail('产品1详细介绍', 'rengongzhuomian.png', '这是产品1的描述。')"
+      ></div>
+    </div>
+    <div id="detail"></div>
+  </body>
+</template>
+
+<style>
+body {
+  position: relative; /* 设置相对定位 */
+  height: 100vh; /* 视窗高度 */
+  margin: 0;
+  background-color: white; /* 设定页面背景颜色 */
+}
+.icons-container {
+  position: absolute; /* 绝对定位 */
+  bottom: 75px; /* 距离底部20px */
+  left: 380px; /* 距离左侧0px */
+  padding-left: 20px; /* 左侧内边距20px */
+}
+.icon {
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+
+  background-position: center; /* 背景图片居中显示 */
+  background-size: 62px 62px; /* 背景图片大小为100px */
+  background-repeat: no-repeat; /* 背景图片不重复 */
+  background-color: white; /* 背景色与页面背景一致 */
+  display: inline-block;
+  margin: 3px;
+  border-radius: 5px; /* 边框圆角 */
+  border: 2px solid transparent; /* 设置默认透明边框 */
+  overflow: hidden;
+  background-clip: content-box;
+}
+
+.icon:hover {
+  border: 2px solid blue; /* 鼠标悬停时变为蓝色边框 */
+}
+
+#detail {
+  display: none;
+  position: fixed;
+  top: 0%;
+  bottom: 170px; /* 调整为图标上方适当位置 */
+  left: 0px; /* 与图标容器左对齐 */
+  background-color: white; /* 网页背景色 */
+  color: black;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box; /* 确保宽度包括内边距 */
+  z-index: 1000;
+}
+</style>
