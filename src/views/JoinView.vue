@@ -6,7 +6,7 @@
         <img
           alt="charecter1"
           class="char1"
-          src="../components/img/join_char1.png"
+          src="../components/img/join-char1.png"
           width="300"
           height="250"
         />
@@ -14,7 +14,7 @@
         <img
           alt="charecter3"
           class="char3"
-          src="../components/img/join_char3.png"
+          src="../components/img/join-char3.png"
           width="200"
           height="250"
         />
@@ -22,7 +22,7 @@
           <img
             alt="charecter2"
             class="char2"
-            src="../components/img/join_char2.png"
+            src="../components/img/join-char2.png"
             width="250"
             height="250"
           />
