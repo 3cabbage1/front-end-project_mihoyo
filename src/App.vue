@@ -58,6 +58,7 @@ watch:{
  $route(to){
  this.routeIndex=to.meta.index;
 }
+
 }
 }
 </script>
@@ -67,7 +68,6 @@ watch:{
     <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
     <div class="wrapper">
-      <!-- <HelloWorld msg="You did it!" /> -->
       <!-- 导航栏使用路由进行导航 -->
       <!-- to指定链接 -->
       <!-- 呈现一个带正确href属性的<a>标签 -->
