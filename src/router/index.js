@@ -48,7 +48,11 @@ const router = createRouter({
       path:'/',
       redirect:'/aside1'
     }
-  ]
+  ],
+  // 保证即使滚动切换路由页面后，页面始终滚动到顶部
+  scrollBehavior() {
+    return { top: 0 }
+  },
 })
 
 export default router

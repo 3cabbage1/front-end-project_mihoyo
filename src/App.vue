@@ -29,7 +29,6 @@ methods:{
       }
       else{
       // 否则切换路由到下一页
-      console.log(this.routeIndex);
       this.routeIndex++;
      
       this.$router.push('/aside'+this.routeIndex);
@@ -47,7 +46,6 @@ methods:{
         return;
         }else{
       // 否则切换路由到上一页
-      console.log(this.routeIndex);
       this.routeIndex--;
       this.$router.push('/aside'+this.routeIndex);
         }

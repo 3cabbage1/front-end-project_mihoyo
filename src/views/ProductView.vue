@@ -21,6 +21,7 @@ export default {
   position: relative;
   top: -100vh;
   width: 100%;
-  height:100vh;
+  height:70vh;/*不能全覆盖，按钮空出 */
+  
 }
 </style>
