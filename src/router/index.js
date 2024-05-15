@@ -21,24 +21,32 @@ const router = createRouter({
     //   component: () => import('../views/AboutView.vue')
     // }
     {
-      path: '/',
+      path: '/aside1',
       name: 'aside1',
+      meta:{index:1},
       component: MainHome
     },
     {
       path: '/aside2',
       name: 'aside2',
+      meta:{index:2},
       component: ProductView
     },
     {
       path: '/aside3',
       name: 'aside3',
+      meta:{index:3},
       component: KnowView
     },
     {
       path: '/aside4',
       name: 'aside4',
+      meta:{index:4},
       component: JoinView
+    },{
+      // 访问‘/’默认首页时重定向回‘aside’首页
+      path:'/',
+      redirect:'/aside1'
     }
   ]
 })

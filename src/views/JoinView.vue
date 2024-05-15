@@ -27,7 +27,7 @@
         </div>
       </div>
       <!-- 主要页面内容 -->
-      <main>
+      <div id="join_main">
         <div id="images">
           <!-- 下层人物图片 -->
           <div id="images_layer1">
@@ -61,7 +61,7 @@
           <h1>加入米哈游</h1>
           <h2>development history</h2>
         </div>
-      </main>
+      </div>
     </div>
   </div>
 </template>
@@ -75,7 +75,7 @@
   left: 60px;
 }
 
-main {
+#join_main {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
