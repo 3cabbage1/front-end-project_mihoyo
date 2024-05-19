@@ -1,11 +1,72 @@
+// import { createRouter, createWebHistory } from 'vue-router'
+// import MainHome from '../views/MainHome.vue'
+// import ProductView from '../views/ProductView.vue'
+// import KnowView from '../views/KnowView.vue'
+// import JoinView from '../views/JoinView.vue'
+// import homeHistory from '@/components/konw-history.vue'
+// const router = createRouter({
+//   history: createWebHistory(import.meta.env.BASE_URL),
+//   // 路由列表
+//   routes: [
+//     // {
+//     //   path: '/',
+//     //   name: 'home',
+//     //   component: HomeView
+//     // },
+//     // {
+//     //   path: '/about',
+//     //   name: 'about',
+//     //   // route level code-splitting
+//     //   // this generates a separate chunk (About.[hash].js) for this route
+//     //   // which is lazy-loaded when the route is visited.
+//     //   component: () => import('../views/AboutView.vue')
+//     // }
+//     {
+//       path: '/aside1',
+//       name: 'aside1',
+//       meta:{index:1},
+//       component: MainHome
+//     },
+//     {
+//       path: '/aside2',
+//       name: 'aside2',
+//       meta:{index:2},
+//       component: ProductView
+//     },
+//     {
+//       path: '/aside3',
+//       name: 'aside3',
+//       meta:{index:3},
+//       component: KnowView
+//     },
+//     {
+//       path: '/aside4',
+//       name: 'aside4',
+//       meta:{index:4},
+//       component: JoinView
+//     },{
+//       // 访问‘/’默认首页时重定向回‘aside’首页
+//       path:'/',
+//       redirect:'/aside1'
+//     }
+//   ],
+//   // 保证即使滚动切换路由页面后，页面始终滚动到顶部
+//   scrollBehavior() {
+//     return { top: 0 }
+//   },
+// })
+
+// export default router
+
 import { createRouter, createWebHistory } from 'vue-router'
+// import HomeView from '../views/HomeView.vue'
 import MainHome from '../views/MainHome.vue'
 import ProductView from '../views/ProductView.vue'
 import KnowView from '../views/KnowView.vue'
 import JoinView from '../views/JoinView.vue'
+import homeHistory from '@/components/konw-history.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  // 路由列表
   routes: [
     // {
     //   path: '/',
@@ -23,36 +84,43 @@ const router = createRouter({
     {
       path: '/aside1',
       name: 'aside1',
-      meta:{index:1},
+      meta: { index: 1 },
       component: MainHome
     },
     {
       path: '/aside2',
       name: 'aside2',
-      meta:{index:2},
+      meta: { index: 2 },
       component: ProductView
     },
     {
       path: '/aside3',
       name: 'aside3',
-      meta:{index:3},
+      meta: { index: 3 },
       component: KnowView
     },
     {
       path: '/aside4',
       name: 'aside4',
-      meta:{index:4},
+      meta: { index: 4 },
       component: JoinView
-    },{
+    },
+    {
+      path: '/homehistory',
+      name: 'homehistory',
+      component: homeHistory
+    },
+    {
       // 访问‘/’默认首页时重定向回‘aside’首页
-      path:'/',
-      redirect:'/aside1'
+      path: '/',
+      redirect: '/aside1'
     }
   ],
-  // 保证即使滚动切换路由页面后，页面始终滚动到顶部
+    // 保证即使滚动切换路由页面后，页面始终滚动到顶部
   scrollBehavior() {
     return { top: 0 }
   },
 })
 
 export default router
+

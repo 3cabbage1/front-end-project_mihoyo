@@ -9,7 +9,7 @@
 export default {
   data() {
     return {
-      src: '/product-infomation/111.html'
+      src: '/产品信息1/wenjian.html'
     }
   }
 }
@@ -22,3 +22,12 @@ export default {
   height:70vh;/*不能全覆盖，按钮空出 */
 }
 </style>
+<!-- <script setup>
+import product_info from '../components/产品信息1/ProductInfo.vue'
+</script>
+
+<template>
+  <main>
+    <product_info />
+  </main>
+</template> -->
