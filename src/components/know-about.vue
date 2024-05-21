@@ -120,7 +120,7 @@ const handleMouseleft = (event) => {
           </div>
         </div></RouterLink
       ><RouterView />
-      <RouterLink to="/homehoner">
+      <!-- <RouterLink to="/homehoner">
         <div class="home-about-cates-wrap">
           <div class="home-about-cate">
             <div
@@ -138,7 +138,7 @@ const handleMouseleft = (event) => {
             </div>
           </div>
         </div> </RouterLink
-      ><RouterView />
+      ><RouterView /> -->
     </div>
 
     <div class="home-about-container">

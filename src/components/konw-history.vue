@@ -44,7 +44,7 @@
                 </div>
               </div>
             </div>
-            <RouterLink to="/homehoner">
+            <!-- <RouterLink to="/homehoner">
               <div class="home-about-cates-wrap">
                 <div class="home-about-cate">
                   <div
@@ -59,7 +59,7 @@
                   </div>
                 </div>
               </div> </RouterLink
-            ><router-view></router-view>
+            ><router-view></router-view> -->
           </div>
         </div>
         <!-- 中间展示页面 -->

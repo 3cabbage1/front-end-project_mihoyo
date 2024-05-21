@@ -65,7 +65,7 @@ import ProductView from '../views/ProductView.vue'
 import KnowView from '../views/KnowView.vue'
 import JoinView from '../views/JoinView.vue'
 import homeHistory from '@/components/konw-history.vue'
-import homeHoner from '@/components/konw-honer.vue'
+//import homeHoner from '@/components/konw-honer.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -112,12 +112,12 @@ const router = createRouter({
       meta: { index: 3 },
       component: homeHistory
     },
-    {
-      path: '/homehoner',
-      name: 'homehoner',
-      meta: { index: 3 },
-      component: homeHoner
-    },
+    // {
+    //   path: '/homehoner',
+    //   name: 'homehoner',
+    //   meta: { index: 3 },
+    //   component: homeHoner
+    // },
     {
       // 访问‘/’默认首页时重定向回‘aside’首页
       path: '/',
