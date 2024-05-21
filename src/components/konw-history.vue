@@ -76,8 +76,8 @@
               :effect="'fade'"
               :loop="false"
               :navigation="{
-                prevEl: '.swiper-button-prev',
-                nextEl: '.swiper-button-next'
+                prevEl: '.swiper-button-next',
+                nextEl: '.swiper-button-prev'
               }"
               :fadeEffect="{
                 crossFade: true
@@ -86,6 +86,134 @@
               :modules="modules"
               class="mySwiper"
             >
+              <swiper-slide>
+                <div
+                  class="bg"
+                  style="
+                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/11/dd4a5ed7f96947a998f588ec433bfa3f_7278556924923918775.png')
+                      center center / cover no-repeat;
+                    overflow: hidden;
+                  "
+                ></div>
+                <div class="event-item__info-label">
+                  银河冒险策略类游戏《崩坏：星穹铁道》全球上线
+                </div>
+                <div class="under">
+                  <img src="@/components/img/10.png" alt="" /></div
+              ></swiper-slide>
+
+              <swiper-slide>
+                <div
+                  class="bg"
+                  style="
+                    background: url('https://webstatic.mihoyo.com/upload/op-public/2023/02/27/215cea0fcaa54574242b33cb8c31d1fa_6478646765191066553.png')
+                      center center / cover no-repeat;
+                    overflow: hidden;
+                  "
+                ></div>
+                <div class="event-item__info-label">2022年5月，公布全新动作游戏《绝区零》</div>
+                <div class="under">
+                  <img src="@/components/img/9.png" alt="" /></div
+              ></swiper-slide>
+
+              <swiper-slide>
+                <div
+                  class="bg"
+                  style="
+                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/03/87db6426a52df35c8aa0fbb067323956_999970175693659617.png')
+                      center center / cover no-repeat;
+                    overflow: hidden;
+                  "
+                ></div>
+                <div class="event-item__info-label">全球多平台发行开放世界游戏《原神》</div>
+                <div class="under">
+                  <img src="@/components/img/8.png" alt="" /></div
+              ></swiper-slide>
+
+              <swiper-slide>
+                <div
+                  class="bg"
+                  style="
+                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/03/030eaaa3073ff45b07069218fe11fdb5_663977200499875839.png')
+                      center center / cover no-repeat;
+                    overflow: hidden;
+                  "
+                ></div>
+                <div class="event-item__info-label">推出鹿鸣相关项目《人工桌面》</div>
+                <div class="under">
+                  <img src="@/components/img/7.png" alt="" /></div
+              ></swiper-slide>
+
+              <swiper-slide>
+                <div
+                  class="bg"
+                  style="
+                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/03/ad5a5ae70f75e8f8c17cb7b875deb362_3270952533189107468.png')
+                      center center / cover no-repeat;
+                    overflow: hidden;
+                  "
+                ></div>
+                <div class="event-item__info-label">推出女性向手游 《未定事件簿》</div>
+                <div class="under">
+                  <img src="@/components/img/6.png" alt="" /></div
+              ></swiper-slide>
+
+              <swiper-slide>
+                <div
+                  class="bg"
+                  style="
+                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/11/12/178d7d0d29c2a05dbf8fd3a5bf7fe3eb_5063849575672974300.png')
+                      center center / cover no-repeat;
+                    overflow: hidden;
+                  "
+                ></div>
+                <div class="event-item__info-label">推出社区产品《米游社》</div>
+                <div class="under">
+                  <img src="@/components/img/5.png" alt="" /></div
+              ></swiper-slide>
+
+              <swiper-slide>
+                <div
+                  class="bg"
+                  style="
+                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/03/e0432bb9aa22b536a848328f3ac6d6ab_5279937607414594040.png')
+                      center center / cover no-repeat;
+                    overflow: hidden;
+                  "
+                ></div>
+                <div class="event-item__info-label">推出3D动作手游《崩坏3》</div>
+                <div class="under">
+                  <img src="@/components/img/4.png" alt="" /></div
+              ></swiper-slide>
+              <swiper-slide>
+                <div
+                  class="bg"
+                  style="
+                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/03/55409602b060760f1ce6e91c521e6551_2986216951670747578.png')
+                      center center / cover no-repeat;
+                    overflow: hidden;
+                  "
+                ></div>
+                <div class="event-item__info-label">推出Q版射击手游《崩坏学园2》</div>
+                <div class="under">
+                  <img src="@/components/img/3.png" alt="" />
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div
+                  class="bg"
+                  style="
+                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/03/d6c9ed59996625a250e19f61f3177923_3821725499114308110.png')
+                      center center / cover no-repeat;
+                    overflow: hidden;
+                  "
+                ></div>
+                <div class="event-item__info-label">上线《崩坏学园》</div>
+                <div class="under">
+                  <img src="@/components/img/2.png" alt="" />
+                </div>
+              </swiper-slide>
+              <!---------------->
               <swiper-slide>
                 <div
                   class="bg"
@@ -102,461 +230,8 @@
                   <img src="@/components/img/1.png" alt="" />
                 </div>
               </swiper-slide>
-
-              <swiper-slide>
-                <div
-                  class="bg"
-                  style="
-                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/03/d6c9ed59996625a250e19f61f3177923_3821725499114308110.png')
-                      center center / cover no-repeat;
-                    overflow: hidden;
-                  "
-                ></div>
-                <div class="event-item__info-label">上线《崩坏学园》</div>
-                <div class="under">
-                  <img src="@/components/img/2.png" alt="" />
-                </div>
-              </swiper-slide>
-
-              <swiper-slide>
-                <div
-                  class="bg"
-                  style="
-                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/03/55409602b060760f1ce6e91c521e6551_2986216951670747578.png')
-                      center center / cover no-repeat;
-                    overflow: hidden;
-                  "
-                ></div>
-                <div class="event-item__info-label">推出Q版射击手游《崩坏学园2》</div>
-                <div class="under">
-                  <img src="@/components/img/3.png" alt="" />
-                </div>
-              </swiper-slide>
-
-              <swiper-slide>
-                <div
-                  class="bg"
-                  style="
-                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/03/e0432bb9aa22b536a848328f3ac6d6ab_5279937607414594040.png')
-                      center center / cover no-repeat;
-                    overflow: hidden;
-                  "
-                ></div>
-                <div class="event-item__info-label">推出3D动作手游《崩坏3》</div>
-                <div class="under">
-                  <img src="@/components/img/4.png" alt="" /></div
-              ></swiper-slide>
-
-              <swiper-slide>
-                <div
-                  class="bg"
-                  style="
-                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/11/12/178d7d0d29c2a05dbf8fd3a5bf7fe3eb_5063849575672974300.png')
-                      center center / cover no-repeat;
-                    overflow: hidden;
-                  "
-                ></div>
-                <div class="event-item__info-label">推出社区产品《米游社》</div>
-                <div class="under">
-                  <img src="@/components/img/5.png" alt="" /></div
-              ></swiper-slide>
-              <swiper-slide>
-                <div
-                  class="bg"
-                  style="
-                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/03/ad5a5ae70f75e8f8c17cb7b875deb362_3270952533189107468.png')
-                      center center / cover no-repeat;
-                    overflow: hidden;
-                  "
-                ></div>
-                <div class="event-item__info-label">推出女性向手游 《未定事件簿》</div>
-                <div class="under">
-                  <img src="@/components/img/6.png" alt="" /></div
-              ></swiper-slide>
-              <swiper-slide>
-                <div
-                  class="bg"
-                  style="
-                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/03/030eaaa3073ff45b07069218fe11fdb5_663977200499875839.png')
-                      center center / cover no-repeat;
-                    overflow: hidden;
-                  "
-                ></div>
-                <div class="event-item__info-label">推出鹿鸣相关项目《人工桌面》</div>
-                <div class="under">
-                  <img src="@/components/img/7.png" alt="" /></div
-              ></swiper-slide>
-              <swiper-slide>
-                <div
-                  class="bg"
-                  style="
-                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/03/87db6426a52df35c8aa0fbb067323956_999970175693659617.png')
-                      center center / cover no-repeat;
-                    overflow: hidden;
-                  "
-                ></div>
-                <div class="event-item__info-label">全球多平台发行开放世界游戏《原神》</div>
-                <div class="under">
-                  <img src="@/components/img/8.png" alt="" /></div
-              ></swiper-slide>
-              <swiper-slide>
-                <div
-                  class="bg"
-                  style="
-                    background: url('https://webstatic.mihoyo.com/upload/op-public/2023/02/27/215cea0fcaa54574242b33cb8c31d1fa_6478646765191066553.png')
-                      center center / cover no-repeat;
-                    overflow: hidden;
-                  "
-                ></div>
-                <div class="event-item__info-label">2022年5月，公布全新动作游戏《绝区零》</div>
-                <div class="under">
-                  <img src="@/components/img/9.png" alt="" /></div
-              ></swiper-slide>
-              <swiper-slide>
-                <div
-                  class="bg"
-                  style="
-                    background: url('https://webstatic.mihoyo.com/upload/op-public/2021/10/11/dd4a5ed7f96947a998f588ec433bfa3f_7278556924923918775.png')
-                      center center / cover no-repeat;
-                    overflow: hidden;
-                  "
-                ></div>
-                <div class="event-item__info-label">
-                  银河冒险策略类游戏《崩坏：星穹铁道》全球上线
-                </div>
-                <div class="under">
-                  <img src="@/components/img/10.png" alt="" /></div
-              ></swiper-slide>
             </swiper>
-            <!-- <swiper>
-              <swiper-slide>
-                <div class="timeline">
-                  <div class="centered-container"></div>
-                  <ul class="timeline-list" style="transform: translateX(-2601px)">
-                    <li class="timeline-item hasYear index-0">
-                      <div class="timeline-item__year"><span> 2011 </span></div>
-                      <div class="timeline-item__event">
-                        <div class="timeline-item__nav">
-                          <div class="timeline-item__nav-icon">
-                            <img
-                              src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/be890111a5a4e904219b5514672ca29a_5391610122551803033.png"
-                            />
-                          </div>
-                          <b class="timeline-item__nav-month">2011.10</b>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="timeline-item hasYear index-1">
-                      <div class="timeline-item__year"><span> 2012 </span></div>
-                      <div class="timeline-item__event">
-                        <div class="timeline-item__nav">
-                          <div class="timeline-item__nav-icon">
-                            <img
-                              src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/3dc43d6fc7f2f0cc0b1d84f8d3a8ca6b_5010791790203761005.png"
-                            />
-                          </div>
-                          <b class="timeline-item__nav-month">2012.12</b>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="timeline-item hasYear index-2">
-                      <div class="timeline-item__year"><span> 2014 </span></div>
-                      <div class="timeline-item__event">
-                        <div class="timeline-item__nav">
-                          <div class="timeline-item__nav-icon">
-                            <img
-                              src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/758954ddcffc39cb0d487114174c3949_4694224143298760540.png"
-                            />
-                          </div>
-                          <b class="timeline-item__nav-month">2014.03</b>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="timeline-item hasYear index-3">
-                      <div class="timeline-item__year"><span> 2016 </span></div>
-                      <div class="timeline-item__event">
-                        <div class="timeline-item__nav">
-                          <div class="timeline-item__nav-icon">
-                            <img
-                              src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/35427b2e03fd190310aac1ad24f12dde_2546310471563307463.png"
-                            />
-                          </div>
-                          <b class="timeline-item__nav-month">2016.09</b>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="timeline-item hasYear index-4">
-                      <div class="timeline-item__year"><span> 2018 </span></div>
-                      <div class="timeline-item__event">
-                        <div class="timeline-item__nav">
-                          <div class="timeline-item__nav-icon">
-                            <img
-                              src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/57b3436033f128a73eb0a408e680ebfa_5674466218505358185.png"
-                            />
-                          </div>
-                          <b class="timeline-item__nav-month">2018.11</b>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="timeline-item hasYear index-5">
-                      <div class="timeline-item__year"><span> 2020 </span></div>
-                      <div class="timeline-item__event">
-                        <div class="timeline-item__nav">
-                          <div class="timeline-item__nav-icon">
-                            <img
-                              src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/e87390d4e528ff7b539861cccc4e7e05_1744499204553962039.png"
-                            />
-                          </div>
-                          <b class="timeline-item__nav-month">2020.07</b>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="timeline-item index-6">
-                      <div class="timeline-item__event">
-                        <div class="timeline-item__nav">
-                          <div class="timeline-item__nav-icon">
-                            <img
-                              src="https://webstatic.mihoyo.com/upload/op-public/2021/10/03/7de06678a2b2a08361f1720c4207633f_7363418870897180657.png"
-                            />
-                          </div>
-                          <b class="timeline-item__nav-month">2020.08</b>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="timeline-item index-7">
-                      <div class="timeline-item__event">
-                        <div class="timeline-item__nav">
-                          <div class="timeline-item__nav-icon">
-                            <img
-                              src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/1756f3a190535e1ebc3a9134ed3cc918_2015760630281845443.png"
-                            />
-                          </div>
-                          <b class="timeline-item__nav-month">2020.09</b>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="timeline-item hasYear index-8">
-                      <div class="timeline-item__year"><span> 2022 </span></div>
-                      <div class="timeline-item__event">
-                        <div class="timeline-item__nav">
-                          <div class="timeline-item__nav-icon">
-                            <img
-                              src="https://webstatic.mihoyo.com/upload/op-public/2023/02/27/5ed9692182bfe3697b5d062c8aa724f5_2339632450759206061.png"
-                            />
-                          </div>
-                          <b class="timeline-item__nav-month">2022.5</b>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="timeline-item hasYear active index-9">
-                      <div class="timeline-item__year"><span> 2023 </span></div>
-                      <div class="timeline-item__event">
-                        <div class="timeline-item__nav">
-                          <div class="timeline-item__nav-icon">
-                            <img
-                              src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/44c08e9f018523ee9429f821c658c2d7_5556620968002944689.png"
-                            />
-                          </div>
-                          <b class="timeline-item__nav-month">2023.04</b>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="timeline-item">
-                      <div class="timeline-item__event">
-                        <div class="timeline-item__nav">
-                          <div class="timeline-item__nav-icon">
-                            <img
-                              src="data:image/png;base64,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"
-                            />
-                          </div>
-                          <b class="timeline-item__nav-month">敬请期待</b>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </swiper-slide>
-            </swiper> -->
 
-            <!-- <div class="swiper-pagination4"></div> -->
-            <!-- <div class="paginations" id="p4pag">
-              <img
-                :style="{
-                  width: '50px',
-                  height: '50px',
-                  margin: '0 40px 0 0'
-                }"
-                v-for="(item, index) in p4Paginations"
-                @click="paginationClick(index)"
-                :src="item"
-                alt=""
-                draggable="false"
-                :key="index"
-              />
-            </div> -->
-            <!-- <div class="paginations" id="p4pag">
-              <img
-                :style="{
-                  width: '50px',
-                  height: '50px',
-                  margin: '0 40px 0 0'
-                }"
-                v-for="(item, index) in p4Paginations"
-                @click="paginationClick(index)"
-                :src="item"
-                alt=""
-                draggable="false"
-                :key="index"
-              />
-            </div> -->
-
-            <!-- 前进后退按钮 -->
-            <!-- :src="leftArrowChangeBg" -->
-            <!-- <div class="timeline">
-              <div class="centered-container"></div>
-              <ul class="timeline-list" style="transform: translateX(-2601px)">
-                <li class="timeline-item hasYear index-0">
-                  <div class="timeline-item__year"><span> 2011 </span></div>
-                  <div class="timeline-item__event">
-                    <div class="timeline-item__nav">
-                      <div class="timeline-item__nav-icon">
-                        <img
-                          src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/be890111a5a4e904219b5514672ca29a_5391610122551803033.png"
-                        />
-                      </div>
-                      <b class="timeline-item__nav-month">2011.10</b>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item hasYear index-1">
-                  <div class="timeline-item__year"><span> 2012 </span></div>
-                  <div class="timeline-item__event">
-                    <div class="timeline-item__nav">
-                      <div class="timeline-item__nav-icon">
-                        <img
-                          src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/3dc43d6fc7f2f0cc0b1d84f8d3a8ca6b_5010791790203761005.png"
-                        />
-                      </div>
-                      <b class="timeline-item__nav-month">2012.12</b>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item hasYear index-2">
-                  <div class="timeline-item__year"><span> 2014 </span></div>
-                  <div class="timeline-item__event">
-                    <div class="timeline-item__nav">
-                      <div class="timeline-item__nav-icon">
-                        <img
-                          src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/758954ddcffc39cb0d487114174c3949_4694224143298760540.png"
-                        />
-                      </div>
-                      <b class="timeline-item__nav-month">2014.03</b>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item hasYear index-3">
-                  <div class="timeline-item__year"><span> 2016 </span></div>
-                  <div class="timeline-item__event">
-                    <div class="timeline-item__nav">
-                      <div class="timeline-item__nav-icon">
-                        <img
-                          src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/35427b2e03fd190310aac1ad24f12dde_2546310471563307463.png"
-                        />
-                      </div>
-                      <b class="timeline-item__nav-month">2016.09</b>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item hasYear index-4">
-                  <div class="timeline-item__year"><span> 2018 </span></div>
-                  <div class="timeline-item__event">
-                    <div class="timeline-item__nav">
-                      <div class="timeline-item__nav-icon">
-                        <img
-                          src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/57b3436033f128a73eb0a408e680ebfa_5674466218505358185.png"
-                        />
-                      </div>
-                      <b class="timeline-item__nav-month">2018.11</b>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item hasYear index-5">
-                  <div class="timeline-item__year"><span> 2020 </span></div>
-                  <div class="timeline-item__event">
-                    <div class="timeline-item__nav">
-                      <div class="timeline-item__nav-icon">
-                        <img
-                          src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/e87390d4e528ff7b539861cccc4e7e05_1744499204553962039.png"
-                        />
-                      </div>
-                      <b class="timeline-item__nav-month">2020.07</b>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item index-6">
-                  <div class="timeline-item__event">
-                    <div class="timeline-item__nav">
-                      <div class="timeline-item__nav-icon">
-                        <img
-                          src="https://webstatic.mihoyo.com/upload/op-public/2021/10/03/7de06678a2b2a08361f1720c4207633f_7363418870897180657.png"
-                        />
-                      </div>
-                      <b class="timeline-item__nav-month">2020.08</b>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item index-7">
-                  <div class="timeline-item__event">
-                    <div class="timeline-item__nav">
-                      <div class="timeline-item__nav-icon">
-                        <img
-                          src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/1756f3a190535e1ebc3a9134ed3cc918_2015760630281845443.png"
-                        />
-                      </div>
-                      <b class="timeline-item__nav-month">2020.09</b>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item hasYear index-8">
-                  <div class="timeline-item__year"><span> 2022 </span></div>
-                  <div class="timeline-item__event">
-                    <div class="timeline-item__nav">
-                      <div class="timeline-item__nav-icon">
-                        <img
-                          src="https://webstatic.mihoyo.com/upload/op-public/2023/02/27/5ed9692182bfe3697b5d062c8aa724f5_2339632450759206061.png"
-                        />
-                      </div>
-                      <b class="timeline-item__nav-month">2022.5</b>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item hasYear active index-9">
-                  <div class="timeline-item__year"><span> 2023 </span></div>
-                  <div class="timeline-item__event">
-                    <div class="timeline-item__nav">
-                      <div class="timeline-item__nav-icon">
-                        <img
-                          src="https://webstatic.mihoyo.com/upload/op-public/2021/11/12/44c08e9f018523ee9429f821c658c2d7_5556620968002944689.png"
-                        />
-                      </div>
-                      <b class="timeline-item__nav-month">2023.04</b>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item">
-                  <div class="timeline-item__event">
-                    <div class="timeline-item__nav">
-                      <div class="timeline-item__nav-icon">
-                        <img
-                          src="data:image/png;base64,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"
-                        />
-                      </div>
-                      <b class="timeline-item__nav-month">敬请期待</b>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div> -->
             <div class="about-history-process-arrow__lf"></div>
             <div class="about-history-process-arrow__rf"></div>
             <div class="swiper-button-prev" id="prev">
@@ -710,26 +385,25 @@ const pag4inationActive = (index: number) => {
 </script>
 
 <style scoped>
-/* .line {
-  position: absolute;
-  bottom: 0.84rem;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: calc(100% - 30rem);
-  height: 2px;
-  border-bottom: 1px solid #2c2c2c;
-} */
-/* .about-history {
+.home {
   position: relative;
-  width: 600px;
-  height: 800px;
-} */
+  position: relative;
+
+  width: 100%;
+  background-color: #f8f9fb;
+  height: 100%;
+  font-family: 'Microsoft YaHei', 微软雅黑, 'MicrosoftJhengHei', PingFang, MingLiu, sans-serif;
+}
+.home-about {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 .about-history {
   position: relative;
   width: 1000px;
   height: 800px;
-  bottom: 90px;
+  bottom: 150px;
   left: 100px;
 }
 
@@ -755,7 +429,8 @@ const pag4inationActive = (index: number) => {
 
 .swiper {
   left: 15%;
-  width: 700px;
+  top: 0rem;
+  width: 800px;
   height: 700px;
 }
 
@@ -783,35 +458,6 @@ const pag4inationActive = (index: number) => {
   height: 51px;
 }
 
-/* .custom-pagination{
-    position: absolute;
-    width: 400px;
-    height: 40px;
-    top:600px;
-    left: 300px;
-    display: flex;
-    z-index: 100;
-} */
-/* 下端按钮 */
-.under img {
-  width: 700px;
-  position: relative;
-  top: 30px;
-}
-
-.paginations {
-  position: absolute;
-  top: 560px;
-  left: 149px;
-  display: flex;
-  align-content: center;
-  opacity: 1;
-  z-index: 1;
-}
-.paginations:hover {
-  width: 30px;
-}
-
 /**下图字 */
 .about-history .event-item__info-label {
   display: -webkit-box;
@@ -831,20 +477,20 @@ const pag4inationActive = (index: number) => {
 /* 左右按钮 */
 .swiper-button-prev {
   position: absolute;
-  left: 150px;
-  top: 415px;
-  width: 102px;
-  height: 102px;
+  left: 12rem;
+  top: 24.5rem;
+  width: 3rem;
+  height: 3rem;
   outline: none;
   z-index: 1;
   border: 1px solid #868686;
 }
 .swiper-button-next {
   position: absolute;
-  left: 850px;
-  top: 415px;
-  width: 102px;
-  height: 102px;
+  left: 66rem;
+  top: 24.5rem;
+  width: 3rem;
+  height: 3rem;
   z-index: 1;
   border: 1px solid #868686;
 }
@@ -865,181 +511,7 @@ const pag4inationActive = (index: number) => {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAASCAYAAABit09LAAAAAXNSR0IArs4c6QAAAKVJREFUKFOF0jEOAiEQBdA/aOAWJmtiwyno9ALcVqOx0oKac1hpaWYDm4UdgIbmDZn5DGFwvPc7JtRz1tqDUuoK4NeECd0BHAE8RbhGRPTWWp83UEIhhE8BW6gYpocWOEIz5JxijBHAKTfOPdWxFRDAyxhzESFXVpmJeJk64QeASXpZimfGdb+twDe494UFHi1F7lleipxhGvAG4NvdRy5wzu35/gN9Q1JfwOUE0gAAAABJRU5ErkJggg==);
 }
 
-/**时间线 */
-
-/* .about-history .timeline {
-  margin: 0 auto;
-  display: block;
-  width: 100%;
-  padding-top: 0.14rem;
-  overflow-x: scroll;
-}
-.about-history .timeline-list {
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  -o-transition: transform 500ms;
-  transition: transform 500ms;
-  transition:
-    transform 500ms,
-    -webkit-transform 500ms;
-}
-.about-history .timeline-item {
-  position: relative;
-  width: 80.7rem;
-  padding: 0 0.26rem;
-  font-size: 0;
-  vertical-align: top;
-  white-space: nowrap;
-  display: inline-block;
-  cursor: pointer;
-}
-.about-history .timeline-item:last-child .timeline-item__nav-icon {
-  background: #a4afbc;
-  border: 0;
-}
-.about-history .timeline-item:last-child .timeline-item__nav-month {
-  color: #a4afbc;
-}
-.about-history .timeline-item.hasYear {
-  padding-left: 1.3rem;
-}
-.about-history .timeline-item__event {
-  position: relative;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-.about-history .timeline-item__nav {
-  position: relative;
-  height: 5.7rem;
-  text-align: center;
-  font-family: HarmonyOS, Arial, Helvetica, sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-.about-history .timeline-item__nav-icon {
-  position: relative;
-  width: 3.54rem;
-  height: 3.54rem;
-  background-color: #868686;
-  border: 2px solid #868686;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.about-history .timeline-item__nav-icon img {
-  position: relative;
-  left: 50%;
-  top: 50%;
-  width: 3.62rem;
-  height: 3.62rem;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.about-history .timeline-item__nav-month {
-  position: absolute;
-  bottom: -0.4rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  text-align: center;
-  font-size: 1.16rem;
-  font-weight: bold;
-  color: #242933;
-  font-family: HarmonyOS, Arial, Helvetica, sans-serif;
-}
-.about-history .timeline-item__nav::before,
-.about-history .timeline-item__nav::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 0.25rem;
-  height: 0.07rem;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background-repeat: no-repeat;
-  background-size: 0.25rem 0.07rem;
-  background-position: center center;
-}
-.about-history .timeline-item__nav::before {
-  left: -0.34rem;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAHCAYAAAD9NeaIAAAAAXNSR0IArs4c6QAAAIxJREFUKFOl0kEOgUEMhuHnD2uuwA2sSbgH/11wFw5iY+0GXIE1iUxSScPKzKz69U36tdN2ft8ax5QucZ/037z78pjggnHkr5jhEbqKZ5MBTlhEwSdWOIeu5tlki12arMT7pKv5x2QeUwyjaOl+iVfoJl5MRrGHaRS8xx5uoVu5YnLAJn1LuaR8Xa3cG9DtNLqF0BKHAAAAAElFTkSuQmCC);
-}
-.about-history .timeline-item__nav::after {
-  right: -0.34rem;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAHCAYAAAD9NeaIAAAAAXNSR0IArs4c6QAAAIxJREFUKFOl0kEOgUEMhuHnD2uuwA2sSbgH/11wFw5iY+0GXIE1iUxSScPKzKz69U36tdN2ft8ax5QucZ/037z78pjggnHkr5jhEbqKZ5MBTlhEwSdWOIeu5tlki12arMT7pKv5x2QeUwyjaOl+iVfoJl5MRrGHaRS8xx5uoVu5YnLAJn1LuaR8Xa3cG9DtNLqF0BKHAAAAAElFTkSuQmCC);
-}
-.about-history .timeline-item__year {
-  position: absolute;
-  left: 0rem;
-  width: 0.56rem;
-  background-color: #f8f9fb;
-  font-size: 1.5rem;
-  font-family: HarmonyOS, Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-align: center;
-  color: #242933;
-  cursor: default;
-}
-.about-history .timeline-item.active .timeline-item__nav-icon {
-  background-color: #242933;
-  border-color: #242933;
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-  -webkit-transition: -webkit-transform 500ms ease-out;
-  transition: -webkit-transform 500ms ease-out;
-  -o-transition: transform 500ms ease-out;
-  transition: transform 500ms ease-out;
-  transition:
-    transform 500ms ease-out,
-    -webkit-transform 500ms ease-out;
-}
-.about-history .timeline-item.active .timeline-item__nav::before,
-.about-history .timeline-item.active .timeline-item__nav::after {
-  opacity: 0;
-} */
 /**-----------------------------------------重复 */
-
-.home {
-  position: relative;
-
-  width: 100%;
-  background-color: #f8f9fb;
-  height: 100%;
-  font-family: 'Microsoft YaHei', 微软雅黑, 'MicrosoftJhengHei', PingFang, MingLiu, sans-serif;
-}
-.home-about {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
 
 /*swiper设置 */
 .swiper-container {
@@ -1100,6 +572,7 @@ const pag4inationActive = (index: number) => {
     -webkit-transform 1500ms;
 }
 
+/* home-about-cates */
 .home-about-cates {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1111,8 +584,8 @@ const pag4inationActive = (index: number) => {
   align-items: center;
   margin-bottom: 10rem;
   margin-right: 2rem;
-  top: 50px;
-  right: -60px;
+  top: 1.9rem;
+  left: 9.2rem;
   position: relative;
 }
 .home-about-cates {
