@@ -14,20 +14,22 @@
       <div class="fp-page__wrap">
         <div class="swiper-container swiper-container-initialized swiper-container-vertical">
           <div class="home-about-cates">
-            <div class="home-about-cates-wrap">
-              <div class="home-about-cate">
-                <div
-                  class="home-about-cate-wrap"
-                  style="transform: translateY(-0.6rem); transition-duration: 0ms"
-                >
-                  <div class="span-wrapper"><span> 关于米哈游 </span></div>
-                  <div class="span-wrapper">
-                    <span class="tab-dark"> 关于米哈游 </span>
+            <RouterLink to="/aside3">
+              <div class="home-about-cates-wrap">
+                <div class="home-about-cate">
+                  <div
+                    class="home-about-cate-wrap"
+                    style="transform: translateY(-0.6rem); transition-duration: 0ms"
+                  >
+                    <div class="span-wrapper"><span> 关于米哈游 </span></div>
+                    <div class="span-wrapper">
+                      <span class="tab-dark"> 关于米哈游 </span>
+                    </div>
+                    <div class="span-wrapper"><span> 关于米哈游 </span></div>
                   </div>
-                  <div class="span-wrapper"><span> 关于米哈游 </span></div>
                 </div>
-              </div>
-            </div>
+              </div> </RouterLink
+            ><router-view></router-view>
             <div class="home-about-cates-wrap home-about-cates-wrap--active">
               <div class="home-about-cate">
                 <div
@@ -42,20 +44,22 @@
                 </div>
               </div>
             </div>
-            <div class="home-about-cates-wrap">
-              <div class="home-about-cate">
-                <div
-                  class="home-about-cate-wrap"
-                  style="transform: translateY(-0.6rem); transition-duration: 0ms"
-                >
-                  <div class="span-wrapper"><span> 荣誉资质 </span></div>
-                  <div class="span-wrapper">
-                    <span class="tab-dark"> 荣誉资质 </span>
+            <RouterLink to="/homehoner">
+              <div class="home-about-cates-wrap">
+                <div class="home-about-cate">
+                  <div
+                    class="home-about-cate-wrap"
+                    style="transform: translateY(-0.6rem); transition-duration: 0ms"
+                  >
+                    <div class="span-wrapper"><span> 荣誉资质 </span></div>
+                    <div class="span-wrapper">
+                      <span class="tab-dark"> 荣誉资质 </span>
+                    </div>
+                    <div class="span-wrapper"><span> 荣誉资质 </span></div>
                   </div>
-                  <div class="span-wrapper"><span> 荣誉资质 </span></div>
                 </div>
-              </div>
-            </div>
+              </div> </RouterLink
+            ><router-view></router-view>
           </div>
         </div>
         <!-- 中间展示页面 -->

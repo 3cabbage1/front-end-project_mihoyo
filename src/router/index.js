@@ -65,6 +65,7 @@ import ProductView from '../views/ProductView.vue'
 import KnowView from '../views/KnowView.vue'
 import JoinView from '../views/JoinView.vue'
 import homeHistory from '@/components/konw-history.vue'
+import homeHoner from '@/components/konw-honer.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -108,7 +109,14 @@ const router = createRouter({
     {
       path: '/homehistory',
       name: 'homehistory',
+      meta: { index: 3 },
       component: homeHistory
+    },
+    {
+      path: '/homehoner',
+      name: 'homehoner',
+      meta: { index: 3 },
+      component: homeHoner
     },
     {
       // 访问‘/’默认首页时重定向回‘aside’首页
@@ -116,11 +124,10 @@ const router = createRouter({
       redirect: '/aside1'
     }
   ],
-    // 保证即使滚动切换路由页面后，页面始终滚动到顶部
+  // 保证即使滚动切换路由页面后，页面始终滚动到顶部
   scrollBehavior() {
     return { top: 0 }
-  },
+  }
 })
 
 export default router
-

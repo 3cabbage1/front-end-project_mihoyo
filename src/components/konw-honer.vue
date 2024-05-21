@@ -19,30 +19,34 @@ import aside_slogan__line from '@/components/img/line.a3e37b6.png'
 
       <div class="fp-page__wrap">
         <div class="home-about-cates">
-          <div class="home-about-cates-wrap">
-            <div class="home-about-cate">
-              <div
-                class="home-about-cate-wrap"
-                style="transform: translateY(-0.6rem); transition-duration: 0ms"
-              >
-                <div class="span-wrapper"><span> 关于米哈游 </span></div>
-                <div class="span-wrapper"><span class="tab-dark"> 关于米哈游 </span></div>
-                <div class="span-wrapper"><span> 关于米哈游 </span></div>
+          <RouterLink to="/aside3">
+            <div class="home-about-cates-wrap">
+              <div class="home-about-cate">
+                <div
+                  class="home-about-cate-wrap"
+                  style="transform: translateY(-0.6rem); transition-duration: 0ms"
+                >
+                  <div class="span-wrapper"><span> 关于米哈游 </span></div>
+                  <div class="span-wrapper"><span class="tab-dark"> 关于米哈游 </span></div>
+                  <div class="span-wrapper"><span> 关于米哈游 </span></div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="home-about-cates-wrap">
-            <div class="home-about-cate">
-              <div
-                class="home-about-cate-wrap"
-                style="transform: translateY(-0.6rem); transition-duration: 0ms"
-              >
-                <div class="span-wrapper"><span> 发展历程 </span></div>
-                <div class="span-wrapper"><span class="tab-dark"> 发展历程 </span></div>
-                <div class="span-wrapper"><span> 发展历程 </span></div>
+            </div> </RouterLink
+          ><router-view></router-view>
+          <RouterLink to="/homehistory">
+            <div class="home-about-cates-wrap">
+              <div class="home-about-cate">
+                <div
+                  class="home-about-cate-wrap"
+                  style="transform: translateY(-0.6rem); transition-duration: 0ms"
+                >
+                  <div class="span-wrapper"><span> 发展历程 </span></div>
+                  <div class="span-wrapper"><span class="tab-dark"> 发展历程 </span></div>
+                  <div class="span-wrapper"><span> 发展历程 </span></div>
+                </div>
               </div>
-            </div>
-          </div>
+            </div> </RouterLink
+          ><router-view></router-view>
           <div class="home-about-cates-wrap home-about-cates-wrap--active">
             <div class="home-about-cate">
               <div

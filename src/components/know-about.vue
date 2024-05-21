@@ -120,24 +120,25 @@ const handleMouseleft = (event) => {
           </div>
         </div></RouterLink
       ><RouterView />
-
-      <div class="home-about-cates-wrap">
-        <div class="home-about-cate">
-          <div
-            class="home-about-cate-wrap"
-            @mouseover="handleMouseOver"
-            @mouseleave="handleMouseleft"
-            :class="{ 'home-about-cates-wrap--active': isActive }"
-            style="transform: translateY(-0.6rem); transition-duration: 0ms"
-          >
-            <div class="span-wrapper"><span> 荣誉资质 </span></div>
-            <div class="span-wrapper">
-              <span class="tab-dark"> 荣誉资质 </span>
+      <RouterLink to="/homehoner">
+        <div class="home-about-cates-wrap">
+          <div class="home-about-cate">
+            <div
+              class="home-about-cate-wrap"
+              @mouseover="handleMouseOver"
+              @mouseleave="handleMouseleft"
+              :class="{ 'home-about-cates-wrap--active': isActive }"
+              style="transform: translateY(-0.6rem); transition-duration: 0ms"
+            >
+              <div class="span-wrapper"><span> 荣誉资质 </span></div>
+              <div class="span-wrapper">
+                <span class="tab-dark"> 荣誉资质 </span>
+              </div>
+              <div class="span-wrapper"><span> 荣誉资质 </span></div>
             </div>
-            <div class="span-wrapper"><span> 荣誉资质 </span></div>
           </div>
-        </div>
-      </div>
+        </div> </RouterLink
+      ><RouterView />
     </div>
 
     <div class="home-about-container">
