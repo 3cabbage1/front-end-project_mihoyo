@@ -70,7 +70,7 @@
               @swiper="onSwiper"
               :spaceBetween="30"
               :effect="'fade'"
-              :loop="true"
+              :loop="false"
               :navigation="{
                 prevEl: '.swiper-button-prev',
                 nextEl: '.swiper-button-next'
