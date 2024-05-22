@@ -91,13 +91,13 @@ const handleMouseleft = (event) => {
             :class="{ 'home-about-cates-wrap--active': isActive }"
             style="transform: translateY(-0.6rem); transition-duration: 0ms"
           >
-            <div class="span-wrapper">
+            <!-- <div class="span-wrapper">
               <span> 关于米哈游 </span>
-            </div>
+            </div> -->
             <div class="span-wrapper">
-              <span class="tab-dark"> 关于米哈游 </span>
+              <div class="tab-dark">关于米哈游</div>
             </div>
-            <div class="span-wrapper"><span> 关于米哈游 </span></div>
+            <!-- <div class="span-wrapper"><span> 关于米哈游 </span></div> -->
           </div>
         </div>
       </div>
@@ -111,11 +111,12 @@ const handleMouseleft = (event) => {
               :class="{ 'home-about-cates-wrap--active': isActive }"
               style="transform: translateY(-0.6rem); transition-duration: 0ms"
             >
-              <div class="span-wrapper"><span> 发展历程 </span></div>
+              <button class="custom-btn btn-12"><span>发展历程</span><span>发展历程</span></button>
+              <!-- <div class="span-wrapper"><span> 发展历程 </span></div>
               <div class="span-wrapper">
                 <span class="tab-dark"> 发展历程 </span>
               </div>
-              <div class="span-wrapper"><span> 发展历程 </span></div>
+              <div class="span-wrapper"><span> 发展历程 </span></div> -->
             </div>
           </div>
         </div></RouterLink
@@ -301,29 +302,29 @@ const handleMouseleft = (event) => {
 .home-about-cate-wrap {
   font-size: 0;
   color: #676b73;
-  white-space: nowrap; /**防止文本换行 */
+  white-space: nowrap;
   position: relative;
   height: 20px;
-  width: 40px;
+  width: 20px;
 
-  -webkit-transform: translateY(-0.6rem); /**设置垂直方向上的位移，可能是为了添加动画效果 */
+  -webkit-transform: translateY(-0.6rem);
   -ms-transform: translateY(-0.6rem);
   transform: translateY(-0.6rem);
 }
 
-.home-about-cates-wrap::before,
+/* .home-about-cates-wrap::before,
 .home-about-cates-wrap::after {
-  /**用于在 .home-about-cates-wrap 元素的前后添加一个竖线 */
+  /**用于在 .home-about-cates-wrap 元素的前后添加一个竖线 
   content: '';
   position: absolute;
   top: 50%;
-  width: 1px;
+  width: 1.5px;
   height: 20px;
   background: #707173;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
+} */
 .home-about-cates-wrap::before {
   left: 0;
 }
@@ -331,45 +332,20 @@ const handleMouseleft = (event) => {
   right: 0;
 }
 
-.home-about-cates-wrap:hover::before,
-.home-about-cates-wrap:hover::after,
-.home-about-cates-wrap--active::before,
-.home-about-cates-wrap--active::after {
-  background-color: #3778e5;
-}
-.home-about-cates-wrap:hover + .home-about-cates-wrap::before,
-.home-about-cates-wrap--active + .home-about-cates-wrap::before {
-  background-color: #3778e5;
-}
-.home-about-cates-wrap--active {
-  /**被点击选中 */
-  color: #fff;
-}
-.home-about-cates-wrap--active .home-about-cate-wrap {
-  -webkit-transform: translateY(-0.6rem);
-  -ms-transform: translateY(-0.6rem);
-  transform: translateY(-0.6rem);
-}
-.home-about-cates-wrap--active span {
-  color: #fff;
-  background-color: #3778e5;
-}
-
-.home-about-cate .span-wrapper {
+.home-about-cate .tab-dark {
+  display: block;
+  font-size: 0.9rem;
   height: 40px;
-  width: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
+  width: 100px;
+  line-height: 2.3rem;
+  position: relative;
+  padding: 0 2rem;
 }
 .home-about-cate span {
   display: block;
   font-size: 0.9rem;
-  height: 20px;
+  height: 40px;
+  width: 100px;
   line-height: 1rem;
   position: relative;
   padding: 0 2rem;
@@ -387,6 +363,75 @@ const handleMouseleft = (event) => {
 .about-fade-enter,
 .about-fade-leave-to {
   opacity: 0;
+}
+
+.btn-12 {
+  position: relative;
+  right: 15px;
+  bottom: 10px;
+  border: none;
+  box-shadow: none;
+  /* width: 10px; */
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+  cursor: pointer;
+}
+.btn-12 span {
+  background: #3778e5;
+  background: linear-gradient(0deg, rgba#3778e5 0%, rgb(0, 172, 238, 1) 100%);
+  display: block;
+  position: absolute;
+
+  width: 140px;
+  height: 40px;
+
+  border-radius: 0px;
+  margin: 0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-12 span:nth-child(1) {
+  color: #f8f9fb;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  background-color: #fff;
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  /* box-shadow:
+    inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.1); */
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  /* box-shadow:
+    inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.1); */
+  color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
 }
 
 /*内容*/

@@ -6,7 +6,7 @@ import aside_slogan__line from '@/components/img/line.a3e37b6.png'
 <template>
   <div class="home">
     <div class="home-about fp-page">
-      <img :src="home_about_decoration" class="home-about-decoration" />
+      <img :src="home_about_decoration" class="home-about-decoration" v-lazy />
       <div data-v-5dd2d15e="" class="aside-slogan aside-slogan">
         <img data-v-5dd2d15e="" :src="aside_slogan__line" alt="miHoYo" class="aside-slogan__line" />
         <img
