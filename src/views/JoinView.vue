@@ -40,12 +40,14 @@
           <!-- 人物图片层叠关系  -->
           <!-- 下层人物图片 -->
           <div id="images_layer1">
+            <div id="char1_frame">
             <img
               alt="charecter3"
               class="char3"
               src="../components/img/join-char3.png"
               style=" width:auto;height:414px;"
             />
+            </div>
               <!-- 中层人物图片 -->
             <div id="images_layer2">
               <img
@@ -56,19 +58,14 @@
             />
             <!-- 上层人物图片 -->
             <div id="images_layer3">
+              <div id="char2_frame">
               <img
                 alt="charecter2"
                 class="char2"
                 src="../components/img/join-char2.png"
                 style=" width:auto;height:456px;"
               />
-              <!-- 遮盖人物图片多余部分，形成框的视觉效果 -->
-              <div id="images_layer4">
-                <img
-                alt="mask"
-                src="../components/img/mask-patch.png"
-                style="width:auto;height:357.22px;"
-              />
+            </div>
               <!-- 招聘图标层 -->
               <div id="recurit_layer">
               <!-- 招聘链接 -->
@@ -84,7 +81,7 @@
                     src="../components/img/left-arrows.png"
                     style=" width:auto;height:77px;"
                    />
-                  <div class="text_rec">
+                  <div class="text_rec" id="text_rec1">
                   <h5>社会招聘</h5>
                   <h6>MORE INFORMATION</h6>
                 </div>
@@ -101,14 +98,13 @@
                     src="../components/img/left-arrows.png"
                     style=" width:auto;height:77px;"
                    />
-                <div class="text_rec">
+                <div class="text_rec" id="text_rec2">
                 <h5>校园招聘</h5>
                 <h6>MORE INFORMATION</h6>
                 </div>
               </div>
               </div>
               </a>
-            </div>
               </div>
             </div>
             </div>
@@ -241,6 +237,15 @@ position:relative;
 top:133px;
 left:130px;
 }
+#char1_frame,#char2_frame{
+  overflow:hidden;/* 超出部分图片不显示 */
+}
+#char2_frame{
+  width:490px;
+}
+#char1_frame{
+  width:340px;
+}
 #images_layer1{
   position: relative;
   left:290px;
@@ -249,17 +254,12 @@ left:130px;
   position: relative;
   top: -386px;
   right:450px;
+  
 }
 #images_layer3 {
   position: relative;
   top: -461px;
   left:300px;
-}
-/* 遮盖物层（遮住多余头发） */
-#images_layer4{
-  position: relative;
-  bottom:297px;
-  left:485px;
 }
 /* 招聘图标部分设置 */
 #recurit_layer{
@@ -267,8 +267,8 @@ left:130px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  top:-200px;
-  left:-270px;
+  top:-140px;
+  left:230px;
   height:175px;
 }
 /* 斜切角矩形 */
@@ -281,22 +281,36 @@ left:130px;
 .back_rec{
   width: 230px;
   height:78px;
-  overflow:hidden
-}
+  overflow:hidden;/* 超出部分箭头不显示 */
+  }
 .back_rec_img{
   position: absolute;
   left:100px;
   height:175px;
 }
-.back_rec_img:hover{
-  transform: translateX(500px);
-  transition: all 0.3s;
+/* .back_rec{
+  width: 230px;
+  height:78px;
+  overflow:hidden;
 }
+.back_rec_img{
+  position: absolute;
+  left:100px;
+  height:175px;
+} */
+/* .back_rec_img:hover{
+  transform: translateX(500px);
+  transition: all 3s;
+} */
 /* 文字部分 */
 .text_rec{
-  position:relative;
+  position:absolute;
   top:15px;
   left:25px;
+}
+#text_rec2{
+  position: absolute;
+  top:110px;
 }
 h5,h6{
   color: white;
