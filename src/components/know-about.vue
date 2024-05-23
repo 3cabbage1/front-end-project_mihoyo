@@ -1,41 +1,9 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 
-// import { onMounted } from 'vue'
-
-// import Swiper from 'swiper'
-// import 'swiper/swiper-bundle.css'
-
-// onMounted(() => {
-//   new Swiper('.swiper-container', {
-//     direction: 'vertical',
-//     followFinger: false,
-//     speed: 800,
-//     mousewheel: true,
-//     pagination: {
-//       el: '.swiper-pagination'
-//     },
-//     on: {
-//       init(swiper) {
-//         const slide = swiper.slides.eq(0)
-//         slide.addClass('ani-slide')
-//       },
-//       transitionStart(swiper) {
-//         for (let i = 0; i < swiper.slides.length; i++) {
-//           const slide = swiper.slides.eq(i)
-//           slide.removeClass('ani-slide')
-//         }
-//       },
-//       transitionEnd(swiper) {
-//         const slide = swiper.slides.eq(swiper.activeIndex)
-//         slide.addClass('ani-slide')
-//       }
-//     }
-//   })
-// })
-// 在你的 Vue 3 组件中
 import { ref, onMounted, onUnmounted } from 'vue'
 
+// 分开
 const isActive = ref(false)
 
 const toggleActive = () => {
@@ -142,8 +110,10 @@ const handleMouseleft = (event) => {
       ><RouterView /> -->
     </div>
 
+    <!-- 内容 -->
     <div class="home-about-container">
       <div class="about-intro">
+        <!-- 彩字部分 -->
         <div class="about-intro__vision">
           <div class="about-intro__vision-title">
             我们的愿景
@@ -156,7 +126,7 @@ const handleMouseleft = (event) => {
             </div>
           </div>
         </div>
-
+        <!-- 关于米哈游 介绍部分 -->
         <div class="about-intro__mihoyo">
           <div class="about-intro__mihoyo-title">
             关于米哈游
@@ -175,6 +145,8 @@ const handleMouseleft = (event) => {
               </p>
               <p style="white-space: pre-wrap; min-height: 1.5em"></p>
               <p style="white-space: pre-wrap; min-height: 1.5em"></p>
+
+              <!-- 底部 -->
               <p style="white-space: pre-wrap">
                 <strong>米哈游的研发理念</strong>
               </p>
@@ -205,7 +177,6 @@ const handleMouseleft = (event) => {
   width: 100%;
   overflow: hidden;
 }
-/*swiper设置 */
 
 /*左侧信息*/
 .aside-slogan[data-v-5dd2d15e] {

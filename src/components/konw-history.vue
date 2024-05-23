@@ -12,6 +12,7 @@
         />
       </div>
       <div class="fp-page__wrap">
+        <!-- 选择 -->
         <div class="swiper-container swiper-container-initialized swiper-container-vertical">
           <div class="home-about-cates">
             <RouterLink to="/aside3">
@@ -288,6 +289,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })
 
+// 底部分页器（已弃
 const p4Paginations = ref<string[]>([
   'https://webstatic.mihoyo.com/upload/op-public/2021/11/12/be890111a5a4e904219b5514672ca29a_5391610122551803033.png',
   'https://webstatic.mihoyo.com/upload/op-public/2021/11/12/3dc43d6fc7f2f0cc0b1d84f8d3a8ca6b_5010791790203761005.png',

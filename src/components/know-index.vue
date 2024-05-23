@@ -36,38 +36,6 @@ import aside_slogan__line from '@/components/img/line.a3e37b6.png'
   overflow: hidden;
   background-color: #f8f9fb;
 }
-/*swiper设置 */
-/* .swiper-container {
-  width: 800px;
-  height: 200px;
-
-  margin: 20px auto;
-} */
-
-/* .swiper-slide {
-  text-align: center;
-
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .swiper-slide:nth-child(2) {
-  background: #3183ff;
-  color: #fff;
-} */
-
-/* .swiper-slide p {
-  transform: translateX(-200px);
-  opacity: 0;
-  transition: all 0.4s;
-}
-
-.ani-slide p {
-  transform: translateX(0);
-  opacity: 1;
-} */
 
 /*左侧信息*/
 .aside-slogan[data-v-5dd2d15e] {
@@ -103,6 +71,7 @@ import aside_slogan__line from '@/components/img/line.a3e37b6.png'
 }
 
 @keyframes mymove {
+  /**动画 */
   from {
     right: -1.5rem;
   }
