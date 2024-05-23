@@ -69,18 +69,20 @@
               <!-- 招聘图标层 -->
               <div id="recurit_layer">
               <!-- 招聘链接 -->
-              <a href="https://jobs.mihoyo.com/"> 
+              <a href="https://jobs.mihoyo.com/" > 
               <!-- 斜切角矩形框 -->
                 <div id="social" class="recruit">  
                     <!-- 背景箭头 -->
                   <div class="back_rec">
-                    <img
+                    <Transition name="left_arr">
+                    <img v-if="true"
                     alt=">>>"
                     id="back_rec1"
                     class="back_rec_img"
                     src="../components/img/left-arrows.png"
                     style=" width:auto;height:77px;"
                    />
+                  </Transition>
                   <div class="text_rec" id="text_rec1">
                   <h5>社会招聘</h5>
                   <h6>MORE INFORMATION</h6>
@@ -88,16 +90,18 @@
                 </div>
               </div> 
               </a>
-              <a href="https://campus.mihoyo.com/"> 
+              <a href="https://campus.mihoyo.com/" > 
               <div id="school" class="recruit">
                 <div class="back_rec">
-                  <img
+                  <Transition name="left_arr">
+                    <img v-if="true"
                     alt=">>>"
                     id="back_rec2"
                     class="back_rec_img"
                     src="../components/img/left-arrows.png"
                     style=" width:auto;height:77px;"
                    />
+                  </Transition>
                 <div class="text_rec" id="text_rec2">
                 <h5>校园招聘</h5>
                 <h6>MORE INFORMATION</h6>
@@ -206,8 +210,15 @@
   <!-- </div> -->
 </template>
 
-<script setup>
+<script>
 // import foot from '../components/foot.vue'
+export default{
+  data(){
+    return{
+      flag_left_arr:false,
+    }
+  }
+  }
 </script>
 
 <style scoped>
@@ -283,25 +294,161 @@ left:130px;
   height:78px;
   overflow:hidden;/* 超出部分箭头不显示 */
   }
-.back_rec_img{
-  position: absolute;
-  left:100px;
-  height:175px;
+  #back_rec1,#back_rec2{
+    position: relative;
+    left:100px;
+    height:175px;
+  }
+/* 动态效果 */
+ /* 箭头动画 */
+@keyframes move_img{
+  0%{
+    left:230px;
+  }
+ 25%{
+  top:100px;
+  left:230px;
+  }
+  30%{
+    top:100px;
+  left:-300px;
+  }
+  35%{
+    top:0px;
+  left:-300px;
+  }
+  80%{
+    top:0px;
+    left:55px;/* 回弹效果 */ 
+  }
+  100%{
+    top:0px;
+    left:30px;
+  }
 }
-/* .back_rec{
-  width: 230px;
-  height:78px;
-  overflow:hidden;
+a:hover img{
+  animation-name: move_img;
+  animation-duration:0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;/*保持最后的状态*/
 }
-.back_rec_img{
-  position: absolute;
-  left:100px;
-  height:175px;
-} */
-/* .back_rec_img:hover{
-  transform: translateX(500px);
-  transition: all 3s;
-} */
+ /* 文字动画 */
+a:hover h6{
+  transform: translateX(25px);
+  transition: all 0.8s;
+}
+ /* 背景色动画 */
+@keyframes move_back {
+  0% {
+    background: linear-gradient(45deg, rgb(61, 123, 230) 0%,  rgb(61, 123, 230) 95%,  transparent 95%);
+  }
+  5% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 5%, rgb(61, 123, 230) 5%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  10% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 10%, rgb(61, 123, 230) 10%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  15% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 15%, rgb(61, 123, 230) 15%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  20% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 20%, rgb(61, 123, 230) 20%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  25% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 25%, rgb(61, 123, 230) 25%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  30% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 30%, rgb(61, 123, 230) 30%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  35% {
+    background: linear-gradient(
+    45deg,rgb(59, 72, 94) 0%,rgb(59, 72, 94) 35%, rgb(61, 123, 230) 35%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  40% {
+    background: linear-gradient(
+    45deg,rgb(59, 72, 94) 0%,rgb(59, 72, 94) 40%, rgb(61, 123, 230) 40%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  45% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 45%, rgb(61, 123, 230) 45%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  50% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 50%, rgb(61, 123, 230) 50%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+ 55% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 55%, rgb(61, 123, 230) 55%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  60% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 60%, rgb(61, 123, 230) 60%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  65% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 65%, rgb(61, 123, 230) 65%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  70% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 70%, rgb(61, 123, 230) 70%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  75% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 75%, rgb(61, 123, 230) 75%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  80% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 80%, rgb(61, 123, 230) 80%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  85% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 85%, rgb(61, 123, 230) 85%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  90% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 90%, rgb(61, 123, 230) 90%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  95% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,rgb(59, 72, 94) 95%, rgb(61, 123, 230) 95%,rgb(61, 123, 230) 95%,  transparent 95%
+  )
+  }
+  100% {
+    background: linear-gradient(
+    45deg, rgb(59, 72, 94) 0%,  rgb(59, 72, 94) 95%,  transparent 95%
+  );
+  }
+}
+a:hover .recruit{
+  animation-name: move_back;
+  animation-duration: 0.27s;
+  animation-timing-function: ease;
+  animation-fill-mode:forwards;
+}
 /* 文字部分 */
 .text_rec{
   position:absolute;

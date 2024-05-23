@@ -86,16 +86,16 @@ watch:{
 </template>
 
 <style scoped>
-nav {
-  position: sticky; /*粘性定位，实现导航条随内容一起滚动并在碰到浏览器视口顶端后于顶部固定*/
-  top: 0px;
-}
-
 nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+nav {
+  position: sticky; /*粘性定位，实现导航条随内容一起滚动并在碰到浏览器视口顶端后于顶部固定*/
+  top: 0px;
+}
+
 /* header {
   line-height: 1.5;
   max-height: 100vh;
