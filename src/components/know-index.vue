@@ -34,6 +34,7 @@ import aside_slogan__line from '@/components/img/line.a3e37b6.png'
   height: 100%;
   width: 100%;
   overflow: hidden;
+  background-color: #f8f9fb;
 }
 /*swiper设置 */
 /* .swiper-container {

@@ -629,6 +629,8 @@ const handleMouseleft = (event) => {
   font-weight: bold;
 }
 .fp-page__wrap {
+  background-color: #f8f9fb;
+
   animation: mymove 1s;
 }
 @keyframes mymove {
