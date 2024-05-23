@@ -549,27 +549,15 @@ const pag4inationActive = (index: number) => {
   top: 0.9rem;
   right: 0rem;
   width: 10rem;
+  animation: mymove 1s;
 }
-.home-about-decoration {
-  -webkit-transition-delay: 2000ms;
-  -o-transition-delay: 2000ms;
-  transition-delay: 2000ms;
-  -webkit-transition:
-    opacity 1500ms,
-    -webkit-transform 1500ms;
-  transition:
-    opacity 1500ms,
-    -webkit-transform 1500ms;
-  -o-transition:
-    opacity 1500ms,
-    transform 1500ms;
-  transition:
-    opacity 1500ms,
-    transform 1500ms;
-  transition:
-    opacity 1500ms,
-    transform 1500ms,
-    -webkit-transform 1500ms;
+@keyframes mymove {
+  from {
+    right: -1.5rem;
+  }
+  to {
+    right: 0rem;
+  }
 }
 
 /* home-about-cates */

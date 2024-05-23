@@ -96,29 +96,19 @@ import aside_slogan__line from '@/components/img/line.a3e37b6.png'
   top: 0.9rem;
   right: 0rem;
   width: 10rem;
-}
-.home-about-decoration {
-  -webkit-transition-delay: 2000ms;
-  -o-transition-delay: 2000ms;
-  transition-delay: 2000ms;
-  -webkit-transition:
-    opacity 1500ms,
-    -webkit-transform 1500ms;
-  transition:
-    opacity 1500ms,
-    -webkit-transform 1500ms;
-  -o-transition:
-    opacity 1500ms,
-    transform 1500ms;
-  transition:
-    opacity 1500ms,
-    transform 1500ms;
-  transition:
-    opacity 1500ms,
-    transform 1500ms,
-    -webkit-transform 1500ms;
+  animation: mymove 1s;
+  /* linear infinite */
+  /* animation-play-state: paused; */
 }
 
+@keyframes mymove {
+  from {
+    right: -1.5rem;
+  }
+  to {
+    right: 0rem;
+  }
+}
 /* home-about-cates */
 
 /*内容*/
