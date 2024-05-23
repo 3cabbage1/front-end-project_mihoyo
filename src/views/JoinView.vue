@@ -77,6 +77,13 @@
                 <div id="social" class="recruit">  
                     <!-- 背景箭头 -->
                   <div class="back_rec">
+                    <img
+                    alt=">>>"
+                    id="back_rec1"
+                    class="back_rec_img"
+                    src="../components/img/left-arrows.png"
+                    style=" width:auto;height:77px;"
+                   />
                   <div class="text_rec">
                   <h5>社会招聘</h5>
                   <h6>MORE INFORMATION</h6>
@@ -87,6 +94,13 @@
               <a href="https://campus.mihoyo.com/"> 
               <div id="school" class="recruit">
                 <div class="back_rec">
+                  <img
+                    alt=">>>"
+                    id="back_rec2"
+                    class="back_rec_img"
+                    src="../components/img/left-arrows.png"
+                    style=" width:auto;height:77px;"
+                   />
                 <div class="text_rec">
                 <h5>校园招聘</h5>
                 <h6>MORE INFORMATION</h6>
@@ -196,7 +210,9 @@
   <!-- </div> -->
 </template>
 
-<script></script>
+<script setup>
+// import foot from '../components/foot.vue'
+</script>
 
 <style scoped>
 /* 整体布局设置 */
@@ -263,17 +279,24 @@ left:130px;
 }
 /* 箭头 */
 .back_rec{
+  width: 230px;
+  height:78px;
+  overflow:hidden
+}
+.back_rec_img{
+  position: absolute;
+  left:100px;
   height:175px;
-  background-image: url('../components/img/left-arrows.png');
-  background-size: 126px;
-  background-repeat: no-repeat;
-  background-position: 100px 0px;
+}
+.back_rec_img:hover{
+  transform: translateX(500px);
+  transition: all 0.3s;
 }
 /* 文字部分 */
 .text_rec{
-  position: relative;
-  left:30px;
+  position:relative;
   top:15px;
+  left:25px;
 }
 h5,h6{
   color: white;
