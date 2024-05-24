@@ -69,42 +69,55 @@
               <!-- 招聘图标层 -->
               <div id="recurit_layer">
               <!-- 招聘链接 -->
-              <a href="https://jobs.mihoyo.com/" > 
+              <a href="https://jobs.mihoyo.com/"  @mouseleave="hleave1"> 
               <!-- 斜切角矩形框 -->
-                <div id="social" class="recruit">  
-                    <!-- 背景箭头 -->
-                  <div class="back_rec">
-                    <Transition name="left_arr">
-                    <img v-if="true"
+               
+                <div id="social" class="recruit"
+                    >  
+               
+                     <!-- 监听鼠标离开事件，绑定类设置鼠标离开动画 -->
+                  <div class="back_rec"
+                    @mouseleave="backleave1"
+                    :class="{ 'back_leave1': is_back_leave1 }">
+                      <!-- 背景箭头 -->
+                    <img 
                     alt=">>>"
                     id="back_rec1"
                     class="back_rec_img"
                     src="../components/img/left-arrows.png"
                     style=" width:auto;height:77px;"
-                   />
-                  </Transition>
+                   
+                     >
+          
                   <div class="text_rec" id="text_rec1">
                   <h5>社会招聘</h5>
-                  <h6>MORE INFORMATION</h6>
+                  <!-- 监听鼠标离开事件，绑定类设置鼠标离开动画 -->
+                  <h6  @mouseleave="hleave1"
+                    :class="{ 'h_leave1': is_h_leave1 }">MORE INFORMATION</h6>
                 </div>
                 </div>
               </div> 
               </a>
-              <a href="https://campus.mihoyo.com/" > 
-              <div id="school" class="recruit">
-                <div class="back_rec">
-                  <Transition name="left_arr">
-                    <img v-if="true"
+              <a href="https://campus.mihoyo.com/"  @mouseleave="hleave2"> 
+              <div id="school" class="recruit"
+              >  
+                <div class="back_rec"
+                    @mouseleave="backleave2"
+                    :class="{ 'back_leave2': is_back_leave2 }">
+                
+                    <img 
                     alt=">>>"
                     id="back_rec2"
                     class="back_rec_img"
                     src="../components/img/left-arrows.png"
                     style=" width:auto;height:77px;"
+                    
                    />
-                  </Transition>
+    
                 <div class="text_rec" id="text_rec2">
                 <h5>校园招聘</h5>
-                <h6>MORE INFORMATION</h6>
+                <h6  @mouseleave="hleave2"
+                    :class="{ 'h_leave2': is_h_leave2 }">MORE INFORMATION</h6>
                 </div>
               </div>
               </div>
@@ -215,8 +228,36 @@
 export default{
   data(){
     return{
-      flag_left_arr:false,
+      is_back_leave1:false,
+      is_back_leave2:false,
+      is_h_leave1:false,
+      is_h_leave2:false,
     }
+  },
+  methods:{
+  backleave1(){
+    this.is_back_leave1=true;
+    setTimeout(() => {
+        this.is_back_leave1 = false;
+      },270); // 动画持续时间 ms
+  },
+  backleave2(){
+    this.is_back_leave2=true;
+    setTimeout(() => {
+        this.is_back_leave2 = false;
+      },270); // 动画持续时间 ms
+  }, 
+  hleave1(){
+    this.is_h_leave1=true;
+      setTimeout(() => {
+        this.is_h_leave1 = false;
+      },800);
+  },hleave2(){
+    this.is_h_leave2=true;
+      setTimeout(() => {
+        this.is_h_leave2 = false;
+      },800);
+  }
   }
   }
 </script>
@@ -273,6 +314,10 @@ left:130px;
   left:300px;
 }
 /* 招聘图标部分设置 */
+a{
+  width: 230px;
+  height:78px;
+}
 #recurit_layer{
   position: relative;
   display: flex;
@@ -302,20 +347,20 @@ left:130px;
 /* 动态效果 */
  /* 箭头动画 */
 @keyframes move_img{
-  0%{
+  15%{
     left:230px;
   }
  25%{
   top:100px;
   left:230px;
   }
-  30%{
+  60%{
     top:100px;
-  left:-300px;
+  left:-200px;
   }
-  35%{
+  65%{
     top:0px;
-  left:-300px;
+  left:-200px;
   }
   80%{
     top:0px;
@@ -326,6 +371,7 @@ left:130px;
     left:30px;
   }
 }
+  /* 鼠标悬浮 */ 
 a:hover img{
   animation-name: move_img;
   animation-duration:0.8s;
@@ -333,11 +379,17 @@ a:hover img{
   animation-fill-mode:forwards;/*保持最后的状态*/
 }
  /* 文字动画 */
+   /* 鼠标悬浮 */ 
 a:hover h6{
-  transform: translateX(25px);
+  transform: translateX(35px);
   transition: all 0.8s;
 }
- /* 背景色动画 */
+  /* 鼠标离开 */
+.h_leave1,.h_leave2{
+  transform: translateX(-0.5px);
+  transition: all 0.8s;
+}
+ /* 背景色切换动画 */
 @keyframes move_back {
   0% {
     background: linear-gradient(45deg, rgb(61, 123, 230) 0%,  rgb(61, 123, 230) 95%,  transparent 95%);
@@ -443,11 +495,30 @@ a:hover h6{
   );
   }
 }
+ /* 鼠标悬浮 */
 a:hover .recruit{
   animation-name: move_back;
   animation-duration: 0.27s;
   animation-timing-function: ease;
   animation-fill-mode:forwards;
+
+}
+  /* 鼠标离开 */
+  .back_leave1{
+  animation-name: move_back;
+  animation-duration:270ms;
+  animation-timing-function: linear;
+  animation-direction:reverse;
+  animation-fill-mode:forwards;
+  animation-iteration-count:infinite;
+}
+.back_leave2{
+  animation-name: move_back;
+  animation-duration:270ms;
+  animation-timing-function: linear;
+  animation-direction:reverse;
+  animation-fill-mode:forwards;
+  animation-iteration-count:infinite;
 }
 /* 文字部分 */
 .text_rec{

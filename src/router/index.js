@@ -119,7 +119,7 @@ const router = createRouter({
     //   component: homeHoner
     // },
     {
-      // 访问‘/’默认首页时重定向回‘aside’首页
+      // 访问‘/’默认首页时重定向回‘aside1’首页
       path: '/',
       redirect: '/aside1'
     }
