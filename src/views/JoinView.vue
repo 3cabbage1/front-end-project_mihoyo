@@ -34,18 +34,19 @@
         </div>
       </div>
       <!-- 主要页面内容 -->
-      <div id="join_main">
+      <div id="join_main" @mousemove="handleMouseMove"><!-- 鼠标移动事件 -->
         <div id="images">
         <div id="char_imgs">
           <!-- 人物图片层叠关系  -->
           <!-- 下层人物图片 -->
           <div id="images_layer1">
             <div id="char1_frame">
+              <!-- 鼠标左右移动更新img动态 -->
             <img
               alt="charecter3"
               class="char3"
               src="../components/img/join-char3.png"
-              style=" width:auto;height:414px;"
+              :style="imageStyle1"
             />
             </div>
               <!-- 中层人物图片 -->
@@ -54,7 +55,7 @@
               alt="charecter1"
               class="char1"
               src="../components/img/join-char1.png"
-              style=" width:auto;height:384px;"
+              :style="imageStyle2"
             />
             <!-- 上层人物图片 -->
             <div id="images_layer3">
@@ -63,7 +64,7 @@
                 alt="charecter2"
                 class="char2"
                 src="../components/img/join-char2.png"
-                style=" width:auto;height:456px;"
+                :style="imageStyle3"
               />
             </div>
               <!-- 招聘图标层 -->
@@ -136,7 +137,7 @@
             <h2>development history</h2>
           </h1>
           <div id="text_frames">
-          <div id="text_frame1" class="text_frame">
+          <div id="text_frame1" class="text_frame" @mouseenter="hover_frame_show1=true" :class="{ 'hover_text_frame': hover_frame_show1 }"  @mouseleave="hover_frame_show1=false">
             <h3>技术宅拯救世界 </h3>
             <h4>技术密集型公司 精英化团队理念 面向未来的产品</h4>
           
@@ -152,8 +153,30 @@
                 src="../components/img/text-frame-arrow.png"
                 style=" width:auto;height:15px;"
               />
-              <div class="blue"></div>
+             <Transition>
+              <div v-if= "hover_frame_show1" class="hover_frame">
+                <div class="hover_texts">
+                <div class="text_h">
+                  <h7>技术密集型公司</h7>
+                <p>行业领先卡通渲染、人工智能、云游戏技术</p>
+                <p>不断探索前沿科技，是一件很酷的事情</p>
+              </div>
+              <div class="text_h">
+                <h7>精英化团队理念</h7>
+                <p>高人才密度</p>
+                <p>全球化团队</p>
+                <p>与优秀的人在一起，做卓越的事情，获得最好的回报</p>
+              </div>
+              <div class="text_h">
+                <h7>面向未来的产品</h7>
+                <p>始终敢为人先</p>
+                <p>致力于为用户提供美好的、超出想象的产品与体验</p>
+              </div>
+            </div>
+              </div>
+            </Transition>
           </div>
+           <div class="blue"></div>
         <div id="text_frame2" class="text_frame">
           <h3>价值观</h3>
           <h4>说到做到 有话直说 只认功劳 追求极致</h4>
@@ -164,15 +187,17 @@
                 src="../components/img/number-img-02.png"
                 style=" width:auto;height:25px;"
               />
-              <img
+              <!-- 2框无悬浮框，所以不需要箭头 -->
+              <!-- <img
                 alt=">>>"
                 class="text_arr"
                 src="../components/img/text-frame-arrow.png"
                 style=" width:auto;height:15px;"
-              />
-              <div class="blue"></div>
+              /> -->
+           
         </div>
-        <div id="text_frame3" class="text_frame">
+        <div class="blue"></div>
+        <div id="text_frame3" class="text_frame" @mouseenter="hover_frame_show3=true" :class="{ 'hover_text_frame': hover_frame_show3 }"  @mouseleave="hover_frame_show3=false">
           <h3>快乐工作用心成长</h3>
           <h4>体系化培训助力成长 简单纯粹的工作氛围</h4>
           
@@ -188,9 +213,28 @@
                 src="../components/img/text-frame-arrow.png"
                 style=" width:auto;height:15px;"
               />
-              <div class="blue"></div>
+              <Transition>
+              <div v-if= "hover_frame_show3" class="hover_frame">
+                <div class="hover_texts" >
+                <div class="text_h" style="width:160px;">
+                  <h7 >体系化培训助力成长</h7>
+                <p style="width:160px;">社招新人培训、校招新人培训</p>
+                <p style="width:160px;">【阿蒙森】计划Leader培训</p>
+                <p style="width:160px;">系列通用&专业课程/沙龙</p>
+              </div>
+              <div class="text_h" style="width:260px;">
+                <h7>简单纯粹的工作氛围</h7>
+                <p>扁平架构、决策高效</p>
+                <p>问题驱动、务实专注</p>
+                <p style="width:260px;">让你在追求极致的道路上更加轻松愉快</p>
+              </div>
+            </div>
+              </div>
+            </Transition>
+             
         </div>
-        <div id="text_frame4" class="text_frame">
+        <div class="blue"></div>
+        <div id="text_frame4" class="text_frame" @mouseenter="hover_frame_show4=true" :class="{ 'hover_text_frame': hover_frame_show4 }"  @mouseleave="hover_frame_show4=false">
           <h3>优秀的薪酬福利</h3>
           <h4>诚意满满薪金回报 丰富年节福利 贴心关爱员工健康</h4>
         
@@ -206,8 +250,34 @@
                 src="../components/img/text-frame-arrow.png"
                 style=" width:auto;height:15px;"
               />
-              <div class="blue"></div>
+              <Transition>
+              <div v-if= "hover_frame_show4" class="hover_frame">
+                <div class="hover_texts">
+                <div class="text_h" style="width:140px;">
+                  <h7>诚意满满薪金回报</h7>
+                <p>行业领先的薪酬</p>
+                <p style="width:140px;">每年两次的薪酬回顾机会</p>
+                <p style="width:140px;">优秀的你，值得有竞争力的回报</p>
+              </div>
+              <div class="text_h" style="width:140px;">
+                <h7>丰富年节福利</h7>
+                <p>年会好礼、多样周边、节日礼品</p>
+                <p style="width:140px;">免费晚餐、零食与下午茶</p>
+                <p>360度关爱你的生活</p>
+              </div>
+              <div class="text_h" style="width:140px;">
+                <h7>贴心关爱员工健康</h7>
+                <p>六险二金、家庭体检、</p>
+                <p>EAP心理咨询</p>
+                <p>10天起步的年假</p>
+                <p>工作与生活平衡，</p>
+                <p style="width:140px;">让你在前进路上后顾无忧</p>
+              </div>
+            </div>
+              </div>
+            </Transition>
         </div>
+        <div class="blue"></div>
       </div>
         </div>
         
@@ -232,6 +302,22 @@ export default{
       is_back_leave2:false,
       is_h_leave1:false,
       is_h_leave2:false,
+      hover_frame_show1:false,
+      hover_frame_show3:false,
+      hover_frame_show4:false,
+      mouseX: 0,
+      imageStyle1: {
+        width:'auto',height:'414px',transition: '3s',
+        transform: 'translateX(0)'
+      },
+      imageStyle2: {
+        width:'auto',height:'384px',transition: '3s',
+        transform: 'translateX(0)'
+      },
+      imageStyle3: {
+        width:'auto',height:'456px',transition: '3s',position:'relative',left:"100px",
+        transform: 'translateX(0)'
+      },
     }
   },
   methods:{
@@ -245,7 +331,7 @@ export default{
     this.is_back_leave2=true;
     setTimeout(() => {
         this.is_back_leave2 = false;
-      },270); // 动画持续时间 ms
+      },270); 
   }, 
   hleave1(){
     this.is_h_leave1=true;
@@ -257,9 +343,23 @@ export default{
       setTimeout(() => {
         this.is_h_leave2 = false;
       },800);
-  }
-  }
-  }
+  }, 
+  //鼠标移动动画处理
+  handleMouseMove(event) {
+      this.mouseX = event.clientX;
+      this.updateImageStyle();
+      
+    },updateImageStyle() {
+      const translateX1 = `translateX(${-(this.mouseX-600)/15}px)`;
+      const translateX2 = `translateX(${-(this.mouseX-600)/25}px)`;
+      const translateX3 = `translateX(${-(this.mouseX-600)/12}px)`;
+      this.imageStyle1.transform = `${translateX1} `;
+      this.imageStyle2.transform = `${translateX2} `;
+      this.imageStyle3.transform = `${translateX3} `;
+    }
+},
+  
+}
 </script>
 
 <style scoped>
@@ -293,7 +393,9 @@ left:130px;
   overflow:hidden;/* 超出部分图片不显示 */
 }
 #char2_frame{
-  width:490px;
+  position: relative;
+  left:-100px;
+  width:590px;
 }
 #char1_frame{
   width:340px;
@@ -560,19 +662,21 @@ h2 {
 }
 /* 文字框 */
 #text_frames{
+  height:560px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:flex-start;
   margin-top: 20px;
-  height:480px;
 }
 .text_frame{
   position: relative;
-  width:540px;
+  width:500px;
   height:110px;
   background-image: url('../components/img/normal-frame.png');/* 文字框背景 */
-  background-size: 500px;
+  background-size: 500px 110px;
   background-repeat: no-repeat;
+  overflow:hidden;
+  /* margin-bottom: 15px; */
 }
 /* 框中文字 */
 h3{
@@ -586,14 +690,14 @@ h4{
   position: relative;
   left: 40px;
   top:35px;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight:400;
   color:rgb(100, 100, 100);
 }
 /* 框装饰 */
 .blue{
   position: relative;
-  bottom:50px;
+  bottom:85px;
   width:4px;
   height: 30px;
   background-color: rgb(45, 119, 222);
@@ -607,6 +711,80 @@ h4{
   position: relative;
   left:370px;
   top:25px;
+}
+
+ /* 鼠标悬浮 */
+  /* 鼠标悬浮样式变化 */
+ .hover_text_frame{
+  width:540px;
+  height:135px;
+  background-size: 540px 135px;
+ }
+ /* 鼠标悬浮动画效果 */
+  /* 悬浮框 */
+.hover_frame{
+  position: relative;
+  top:-68px;
+  /* left:-550px; */
+  width:540px;
+  height:140px;
+  background-image: url('../components/img/hover-frame.png');/* 文字框背景 */
+  background-size: 540px 140px;
+  background-repeat: no-repeat;
+  margin-bottom: 15px;
+  animation-name:hover_frame ;
+}
+/* 进入动画 */
+@keyframes hover_frame {
+    from {
+        left:-550px;
+    }
+    to {
+      left:0px;
+    }
+}
+.v-enter-active {
+    animation-name: hover_frame;
+    animation-duration: 0.3s;
+}
+ /* 离开：始位置 */
+.v-leave {
+    transform: translateX(0%);
+ 
+    transition: ease-in 0.3s;
+}
+/* 离开：末位置 */
+.v-leave-to {
+    transform: translateX(-100%);
+
+     transition: ease-in 0.3s;
+}
+
+
+
+ /* 悬浮框中文字 */
+.hover_texts{
+  position: relative;
+  left: 30px;
+  top:18px;
+  width:500px;
+  display: flex;
+  justify-content:space-around;
+ 
+}
+h7{
+  font-size:0.9rem;
+  font-weight: bold;
+  color: rgba(45, 119, 222, 0.801);
+}
+p{
+  position: relative;
+  top:8px;
+  width:130px;
+  font-size:0.75rem;
+  align-content: center;
+  font-weight:400;
+  color:rgb(100, 100, 100);
 }
 /* 右侧背景图表设置 */
 /* 右上careers图标 */

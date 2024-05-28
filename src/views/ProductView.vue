@@ -23,11 +23,13 @@ export default {
   height:70vh;/*不能全覆盖，按钮空出 */
 }
 </style>
+
+
 <!-- <script setup>
 import product_info from '../components/产品信息1/ProductInfo.vue'
-</script>
+</script> -->
 
-<template>
+<!-- <template>
   <main>
     <product_info />
   </main>

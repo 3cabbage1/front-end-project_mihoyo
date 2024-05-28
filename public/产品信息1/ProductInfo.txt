@@ -1,4 +1,4 @@
-<script >
+<!-- <script >
 export default{
   el: '#app',
   data(){
@@ -87,8 +87,8 @@ export default{
     }
   }
 };
-</script>
-<template>
+</script> -->
+<!-- <template>
      <div id="app">
     <div class="icons-container">
       <div 
@@ -116,10 +116,10 @@ export default{
       </div>
     </div>
   </div>
-    </template>
+    </template> -->
 
 
-<style scoped>
+<!-- <style scoped>
 body {
   position: relative;
   height: 100vh;
@@ -218,4 +218,226 @@ body {
   text-align: right;
   margin-top: auto; /* Push the description to the bottom */
 }
-</style>
+</style> -->
+<!-- <template>
+  <div>
+    <iframe :src="src" frameborder="0" style="width: 100%; height: 100vh"></iframe>
+    <div id="catch_mouth"></div>
+
+    <div id="app">
+      <div class="icons-container">
+        <div v-for="icon in icons" :key="icon.id" class="icon" :style="{ backgroundImage: 'url(' + icon.iconUrl + ')' }" @click="showDetail(icon)"></div>
+      </div>
+
+      <div id="detail" v-if="selectedIcon">
+        <div class="image-container">
+          <img :src="selectedIcon.backgroundImage" class="background-image" alt="背景图片">
+          <img :src="selectedIcon.foregroundImage" class="foreground-image" alt="产品图片">
+          <div class="title-image-container">
+            <img :src="selectedIcon.titleImage" class="title-image" alt="标题图片">
+            <p class="title-text">{{ selectedIcon.titleText }}</p>
+          </div>
+        </div>
+        <div class="detail-content">
+          <div class="description">
+            <p>{{ selectedIcon.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template> -->
+
+<!-- <script>
+export default {
+  data() {
+    return {
+      src: '/product-infomation/111.html',
+      icons: [
+        {
+          id: 1,
+          iconUrl: 'benghuaixueyuan2tubiao.png',
+          titleImage: 'benghuaixueyuan2zi.png',
+          backgroundImage: 'benghuiaxueyuan2beijig.png',
+          foregroundImage: 'benghuaixueyuan2.png',
+          description: '米哈游崩坏系列经典Q版射击游戏。末日都市之旅，指尖爽快战斗，开启与少女们的末世物语。',
+          titleText: 'Houkai Gakuen 2'
+        },
+        {
+          id: 2,
+          iconUrl: 'benghuaisantubiao.png',
+          titleImage: 'benghuasan zi.png',
+          backgroundImage: 'benghuaisanbeijing.png',
+          foregroundImage: 'benghuaisan.png',
+          description: '米哈游崩坏系列3D全视角卡通渲染、次世代动作游戏。在被崩坏侵蚀的世界中，勇敢的少女组成的女武神部队，为守护世界而展开了战斗。',
+          titleText: 'Honkai lmpact 3rd'
+        },
+        {
+          id: 3,
+          iconUrl: 'weidingshijainbutubiao.png',
+          titleImage: 'weidingshijianbuzi.png',
+          backgroundImage: 'weidingshijianbubeijing.png',
+          foregroundImage: 'weidingshijianbu.png',
+          description: '米哈游律政恋爱推理游戏，你将扮演新人律师，在与他携手解决离奇委托的过程中，被卷入不为人知的阴谋。这是一场恋爱x推理的冒险，你将做出怎样的抉择?',
+          titleText: 'Tears of Themis'
+        },
+        {
+          id: 4,
+          iconUrl: 'nidiedetubiao.png',
+          titleImage: 'nidiedezi.png',
+          backgroundImage: 'nidiedebeijing.png',
+          foregroundImage: 'nidie.png',
+          description: '米哈游全新开放世界角色冒险游戏，你将在游戏中探索一个被称作「提瓦特」的幻想世界。',
+          titleText: 'Genshin lmpact'
+        },
+        {
+          id: 5,
+          iconUrl: 'tiedaotubiao.png',
+          titleImage: 'tiedaozi.png',
+          backgroundImage: 'tiedaobeijing.png',
+          foregroundImage: 'tiedao.png',
+          description: '米哈游全新银河冒险策略游戏。你将由此探索新的文明，结识新的伙伴在无数光怪陆离的「世界」与「世界」之间展开新的冒险。所有你想知道的，都将在群星中找到答案。',
+          titleText: 'Honkai: Star Rail'
+        },
+        {
+          id: 6,
+          iconUrl: 'juequlingtubiao.png',
+          titleImage: 'juequlingzi.png',
+          backgroundImage: 'juequlingbeijing.png',
+          foregroundImage: 'juequling.png',
+          description: '米哈游自研的全新动作游戏。在这个空洞灾祸频仍的世界里，崛起了一座另类的城市————「新艾利都」而你将成为串联起空洞与都市的关键少数派，名为「绳匠」的特殊职业人士。这里正等待着见证你的故事。',
+          titleText: 'Zenless Zone Zero'
+        },
+        {
+          id: 7,
+          iconUrl: 'miyoushetubiao.png',
+          titleImage: 'miyoushezi.png',
+          backgroundImage: 'miyoushebeijing.png',
+          foregroundImage: 'miyoushe.png',
+          description: '米哈游旗下游戏玩家社区，集合了官方资讯、福利趣闻、实用工具及同人作品。让有爱的小伙伴们相聚在这里，一起聊游戏、找攻略、领奖励。',
+          titleText: 'MIYOUSHE'
+        },
+        {
+          id: 8,
+          iconUrl: 'rengongzhuomiantubiao.png',
+          titleImage: 'rengongzhuomianzi.png',
+          backgroundImage: 'rengongzhongmianbeijing.png',
+          foregroundImage: 'rengongzhuomian.png',
+          description: '米哈游旗下动态桌面软件。一键点击唤醒鹿鸣感受专属陪伴和沉浸式体验。',
+          titleText: 'NOva Desktop'
+        }
+      ],
+      selectedIcon: null
+    }
+  },
+  methods: {
+    showDetail(icon) {
+      this.selectedIcon = icon;
+      document.getElementById('detail').style.display = 'flex';
+    }
+  }
+}
+</script> -->
+
+<!-- <style scoped>
+#catch_mouth {
+  position: relative;
+  top: -100vh;
+  width: 100%;
+  height: 70vh;
+}
+
+.icons-container {
+  position: absolute;
+  bottom: 75px;
+  left: 380px;
+  padding-left: 20px;
+}
+
+.icon {
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+  background-position: center;
+  background-size: 62px 62px;
+  background-repeat: no-repeat;
+  background-color: white;
+  display: inline-block;
+  margin: 3px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  overflow: hidden;
+  background-clip: content-box;
+}
+
+.icon:hover {
+  border: 2px solid blue;
+}
+
+#detail {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 170px;
+  left: 0;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.background-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+}
+
+.foreground-image {
+  position: relative;
+  z-index: 2;
+}
+
+.title-image-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50%;
+}
+
+.title-image {
+  width: 100%;
+}
+
+.title-text {
+  margin: 0;
+  text-align: right;
+  width: 100%;
+}
+
+.description {
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: right;
+  margin-top: auto;
+}
+</style> -->
