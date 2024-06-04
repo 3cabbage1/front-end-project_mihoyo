@@ -307,15 +307,15 @@ export default{
       hover_frame_show4:false,
       mouseX: 0,
       imageStyle1: {
-        width:'auto',height:'414px',transition: '3s',
+        width:'auto',height:'414px',transition: 'ease-out 0.6s', 
         transform: 'translateX(0)'
       },
       imageStyle2: {
-        width:'auto',height:'384px',transition: '3s',
+        width:'auto',height:'384px',transition: 'ease-out 0.6s',
         transform: 'translateX(0)'
       },
       imageStyle3: {
-        width:'auto',height:'456px',transition: '3s',position:'relative',left:"100px",
+        width:'auto',height:'456px',transition: 'ease-out 0.6s',position:'relative',left:"100px",
         transform: 'translateX(0)'
       },
     }
@@ -350,9 +350,9 @@ export default{
       this.updateImageStyle();
       
     },updateImageStyle() {
-      const translateX1 = `translateX(${-(this.mouseX-600)/15}px)`;
+      const translateX1 = `translateX(${-(this.mouseX-600)/20}px)`;
       const translateX2 = `translateX(${-(this.mouseX-600)/25}px)`;
-      const translateX3 = `translateX(${-(this.mouseX-600)/12}px)`;
+      const translateX3 = `translateX(${-(this.mouseX-600)/15}px)`;
       this.imageStyle1.transform = `${translateX1} `;
       this.imageStyle2.transform = `${translateX2} `;
       this.imageStyle3.transform = `${translateX3} `;
@@ -399,6 +399,7 @@ left:130px;
 }
 #char1_frame{
   width:340px;
+
 }
 #images_layer1{
   position: relative;
