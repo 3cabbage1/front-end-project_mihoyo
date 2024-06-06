@@ -82,12 +82,14 @@ import newTry2 from './know-about.vue'
   }
 }
 .flag {
-
+  opacity: 0;
+  filter: blur(5px);
   transition: all 1s;
   transform: translateY(-100%);
 }
 .active {
-
+  opacity: 1;
+  filter: blur(0);
   transform: translateY(0);
 }
 </style>

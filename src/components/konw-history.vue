@@ -770,22 +770,23 @@ const pag4inationActive = (index: number) => {
 	/* 水平条纹 */
     -webkit-linear-gradient(
       /*渐变方向:从上到下*/ top,
-      /*最开始透明*/ #8394b50b 0,
-      /*到3px均透明*/ #8394b50b 3.5px,
-      /*到4.3px过渡为浅蓝色*/ #576e971c 4px,
-      /*以此类推*/ #8394b50b 4.5px,
+      /*最开始背景色*/ #8394b50b 0,/* 背景色 */
+      /* 这几行用于控制网格线条粗细 */
+      /*到3.5px均背景色*/ #8394b50b 3.5px,
+      /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px, /* 线条色 */
+      /*以此类推*/ #8394b50b 4.7px,
       #8394b50b 60px,
       #4f689506 60px
     ),
-    /* 垂直条纹 */ -webkit-linear-gradient(left, /*最开始透明*/ #8394b50b 0, /*到3px均透明*/
-          #8394b50b 3.5px, /*到4.3px过渡为浅蓝色*/ #576e971c 4px, /*以此类推*/ #8394b50b 4.5px, #8394b50b
-          60px, #4f689506 60px);
-
-  -webkit-background-size: 31px 31px;
-  -moz-background-size: 31px 31px;
-  background-size: 31px 31px;
-  -webkit-background-size: 15px 15px;
-  -moz-background-size: 15px 15px;
-  background-size: 15px 15px;
+    /* 垂直条纹 */ -webkit-linear-gradient(left, /*最开始背景色*/ #8394b50b 0,
+      /*到3.5px均背景色*/ #8394b50b 3.5px,
+      /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px,
+      /*以此类推*/ #8394b50b 4.7px,
+      #8394b50b 60px,
+      #4f689506 60px);
+/* 网格大小参数 */
+  -webkit-background-size: 20px 20px;
+  -moz-background-size: 20px 20px;
+  background-size: 20px 20px;
 }
 </style>

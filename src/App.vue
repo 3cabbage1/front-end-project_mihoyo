@@ -38,7 +38,7 @@ methods:{
      
       this.$router.push('/aside'+this.routeIndex);
       }
-      },500)
+      },400)
     }
      // 向上滚动
     if(e.deltaY<0){
@@ -56,7 +56,7 @@ methods:{
       this.routeIndex--;
       this.$router.push('/aside'+this.routeIndex);
         }
-      },500)
+      },400)
     }
   }
 },

@@ -602,13 +602,13 @@ const handleMouseleft = (event) => {
 }
 .flag1 {
   
-  transition: all 1s;
-  transform: translateY(-10%);
+  transition: ease-out 0.6s;
+  transform: translateY(20%);
 }
 .flag_1 {
  
-  transition: all 0.5s;
-  transform: translateY(10%);
+  transition: ease-out 0.6s;
+  transform: translateY(-20%);
 }
 .flag2 {
   opacity: 0;

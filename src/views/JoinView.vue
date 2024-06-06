@@ -851,12 +851,12 @@ bottom: -40vh;
 /* 左侧内容 */
 .flag1 {
   transition: all 0.6s;
-  transform: translateY(400px);
+  transform: translateY(300px);
 }
 /* 右侧内容 */
 .flag2 {
   transition: ease-out 0.6s;
-  transform: translateY(400px);
+  transform: translateY(300px);
 }
 /* 纵向 */
 .act1{
