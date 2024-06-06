@@ -39,7 +39,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding:20px;
   .iright{
     .tit{
       color:#fff;

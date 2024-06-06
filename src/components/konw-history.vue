@@ -390,7 +390,7 @@ const pag4inationActive = (index: number) => {
   position: relative;
 
   width: 100%;
-  background-color: #f8f9fb;
+  /* background-color: #f8f9fb; */
   height: 100%;
   font-family: 'Microsoft YaHei', 微软雅黑, 'MicrosoftJhengHei', PingFang, MingLiu, sans-serif;
 }
@@ -485,6 +485,8 @@ const pag4inationActive = (index: number) => {
   z-index: 1;
   border: 1px solid #868686;
   cursor: pointer;
+  background-image: url('img/向左.png');
+  background-size: cover; /* 可以根据需要调整尺寸 */
 }
 .swiper-button-next {
   position: absolute;
@@ -495,11 +497,13 @@ const pag4inationActive = (index: number) => {
   z-index: 1;
   border: 1px solid #868686;
   cursor: pointer;
+  background-image: url('img/向右.png');
+  background-size: cover; /* 可以根据需要调整尺寸 */
 }
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   background-color: #3778e5;
-  /* background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAASCAYAAABit09LAAAAAXNSR0IArs4c6QAAAJNJREFUKFOF0jEOwjAMheHfKudAohJnoYemAjGVE3COTnQzCnUrxXHSLFk+K/aLhYOjql0i0nKqegbuwFKFhh5AD7xC6NAbuBUwRCJzBmsoG6aFdniE/tBy+gBXYG1cZPaxeTgBQwhTpXs6xPvUhp/ABShwFM+Gs35rgRe49YU5rm2P6zleiq3Y8Ah8m/to0Z3S/QPLCV9Gvg2wEQAAAABJRU5ErkJggg==); */
+
   border-color: rgba(0, 0, 0, 0);
 }
 .swiper-button-prev.disabled,
@@ -509,8 +513,8 @@ const pag4inationActive = (index: number) => {
 .swiper-button-prev.disabled:hover,
 .swiper-button-next.disabled:hover {
   border-color: #868686;
-  background-color: rgba(0, 0, 0, 0);
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAASCAYAAABit09LAAAAAXNSR0IArs4c6QAAAKVJREFUKFOF0jEOAiEQBdA/aOAWJmtiwyno9ALcVqOx0oKac1hpaWYDm4UdgIbmDZn5DGFwvPc7JtRz1tqDUuoK4NeECd0BHAE8RbhGRPTWWp83UEIhhE8BW6gYpocWOEIz5JxijBHAKTfOPdWxFRDAyxhzESFXVpmJeJk64QeASXpZimfGdb+twDe494UFHi1F7lleipxhGvAG4NvdRy5wzu35/gN9Q1JfwOUE0gAAAABJRU5ErkJggg==);
+  /* background-color: rgba(0, 0, 0, 0); */
+  /* background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAASCAYAAABit09LAAAAAXNSR0IArs4c6QAAAKVJREFUKFOF0jEOAiEQBdA/aOAWJmtiwyno9ALcVqOx0oKac1hpaWYDm4UdgIbmDZn5DGFwvPc7JtRz1tqDUuoK4NeECd0BHAE8RbhGRPTWWp83UEIhhE8BW6gYpocWOEIz5JxijBHAKTfOPdWxFRDAyxhzESFXVpmJeJk64QeASXpZimfGdb+twDe494UFHi1F7lleipxhGvAG4NvdRy5wzu35/gN9Q1JfwOUE0gAAAABJRU5ErkJggg==); */
 }
 
 /**-----------------------------------------重复 */
@@ -734,7 +738,7 @@ const pag4inationActive = (index: number) => {
   transform-origin: 50% 50% -20px;
 }
 .btn-12 span:nth-child(2) {
-  background-color: #fff;
+  background-color: #8394b50b;
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
@@ -760,5 +764,28 @@ const pag4inationActive = (index: number) => {
   -webkit-transform: rotateX(-90deg);
   -moz-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
+}
+.fp-page__wrap {
+  background:
+	/* 水平条纹 */
+    -webkit-linear-gradient(
+      /*渐变方向:从上到下*/ top,
+      /*最开始透明*/ #8394b50b 0,
+      /*到3px均透明*/ #8394b50b 3.5px,
+      /*到4.3px过渡为浅蓝色*/ #576e971c 4px,
+      /*以此类推*/ #8394b50b 4.5px,
+      #8394b50b 60px,
+      #4f689506 60px
+    ),
+    /* 垂直条纹 */ -webkit-linear-gradient(left, /*最开始透明*/ #8394b50b 0, /*到3px均透明*/
+          #8394b50b 3.5px, /*到4.3px过渡为浅蓝色*/ #576e971c 4px, /*以此类推*/ #8394b50b 4.5px, #8394b50b
+          60px, #4f689506 60px);
+
+  -webkit-background-size: 31px 31px;
+  -moz-background-size: 31px 31px;
+  background-size: 31px 31px;
+  -webkit-background-size: 15px 15px;
+  -moz-background-size: 15px 15px;
+  background-size: 15px 15px;
 }
 </style>

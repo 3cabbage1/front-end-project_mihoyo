@@ -1,6 +1,7 @@
 <script setup>
 import home_about_decoration from '@/components/img/decoration.b195643.png'
 import aside_slogan__line from '@/components/img/line.a3e37b6.png'
+import newTry2 from './know-about.vue'
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import aside_slogan__line from '@/components/img/line.a3e37b6.png'
           class="aside-slogan__text"
         />
       </div>
+      <new-try2 />
     </div>
   </div>
 </template>
@@ -26,7 +28,7 @@ import aside_slogan__line from '@/components/img/line.a3e37b6.png'
   position: relative;
 
   width: 100%;
-  background-color: #f8f9fb;
+  /* background-color: #f8f9fb; */
   height: 100%;
   font-family: 'Microsoft YaHei', 微软雅黑, 'MicrosoftJhengHei', PingFang, MingLiu, sans-serif;
 }
@@ -34,7 +36,7 @@ import aside_slogan__line from '@/components/img/line.a3e37b6.png'
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-color: #f8f9fb;
+  /* background-color: #f8f9fb; */
 }
 
 /*左侧信息*/
@@ -79,7 +81,13 @@ import aside_slogan__line from '@/components/img/line.a3e37b6.png'
     right: 0rem;
   }
 }
-/* home-about-cates */
+.flag {
 
-/*内容*/
+  transition: all 1s;
+  transform: translateY(-100%);
+}
+.active {
+
+  transform: translateY(0);
+}
 </style>

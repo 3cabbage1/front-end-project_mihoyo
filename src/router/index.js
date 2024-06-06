@@ -85,31 +85,31 @@ const router = createRouter({
     {
       path: '/aside1',
       name: 'aside1',
-      meta: { index: 1 },
+      meta: { index: 1,direction:0 },
       component: MainHome
     },
     {
       path: '/aside2',
       name: 'aside2',
-      meta: { index: 2 },
+      meta: { index: 2,direction:0 },
       component: ProductView
     },
     {
       path: '/aside3',
       name: 'aside3',
-      meta: { index: 3 },
+      meta: { index: 3,direction:0 },
       component: KnowView
     },
     {
       path: '/aside4',
       name: 'aside4',
-      meta: { index: 4 },
+      meta: { index: 4,direction:0 },
       component: JoinView
     },
     {
       path: '/homehistory',
       name: 'homehistory',
-      meta: { index: 3 },
+      meta: { index: 3,direction:0 },
       component: homeHistory
     },
     // {

@@ -37,7 +37,7 @@ import product_info from '../components/产品信息1/ProductInfo.vue'
 
 
 <template>
-  
+
   <div>
     <iframe :src="src" frameborder="0" style="width: 100%; height: 100vh"></iframe>
     <div id="catch_mouth"></div>

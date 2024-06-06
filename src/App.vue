@@ -4,7 +4,9 @@
  export default{
   data(){
     return{
-      routeIndex:1,
+      routeIndex:1,//路由序号
+      nav_show:true,//导航栏显示标记
+      slide_direction:0,//组件滑动方向标记（1：向上；-1：向下；0：不动）
     }
   },
 //  组件挂载完后调用添加滚动事件监听器  
@@ -21,7 +23,10 @@ methods:{
     if(e.deltaY>0){
       // 清除之前可能设置的任何定时器。防止快速滚动时多次触发路由更改。
       clearTimeout(this.timer)
-      // 设置定时器时间延迟，防止短时内连续的路由更改。
+      //鼠标向下滚动，组件应该向上移动
+      if(this.routeIndex!=4)
+      this.slide_direction=1;
+    // 设置定时器时间延迟，防止短时内连续的路由更改。
       this.timer=setTimeout(()=>{
         // 若到最末页，结束
         if(this.routeIndex===4) {
@@ -39,6 +44,8 @@ methods:{
     if(e.deltaY<0){
       // 清除之前可能设置的任何定时器。防止快速滚动时多次触发路由更改。
       clearTimeout(this.timer)
+      if(this.routeIndex!=1)
+      this.slide_direction=-1;//鼠标向上滚动，组件应该向下移动
       // 设置定时器时间延迟，防止短时内连续的路由更改。
       this.timer=setTimeout(()=>{
         // 若到最末页，结束
@@ -54,9 +61,17 @@ methods:{
   }
 },
 watch:{
-  // 监听器：保证当前routeIndex就是当前渲染路由的index（从而保证通过导航栏点击跳转后routeIndex值不会出错）
+  // 监听路由
  $route(to){
- this.routeIndex=to.meta.index;
+  console.log(this.slide_direction);
+ this.routeIndex=to.meta.index;//保证当前routeIndex就是当前渲染路由的index（从而保证通过导航栏点击跳转后routeIndex值不会出错）
+ to.meta.direction=this.slide_direction;//更新组件滑动方向值
+//  console.log("to.meta.direction",to.meta.direction)
+ // 首页导航栏不显示
+ if(this.routeIndex===1)
+ this.nav_show=false;
+else
+this.nav_show=true;
 }
 
 }
@@ -71,12 +86,12 @@ watch:{
       <!-- 导航栏使用路由进行导航 -->
       <!-- to指定链接 -->
       <!-- 呈现一个带正确href属性的<a>标签 -->
-      <nav>
+      <nav v-if="nav_show">
         <ul>
-          <RouterLink to="/aside1">首页</RouterLink>
-          <RouterLink to="/aside2">产品信息</RouterLink>
-          <RouterLink to="/aside3">了解我们</RouterLink>
-          <RouterLink to="/aside4">加入我们</RouterLink>
+          <RouterLink to="/aside1" id="aside1">首页</RouterLink>
+          <RouterLink to="/aside2" id="aside2">产品信息</RouterLink>
+          <RouterLink to="/aside3" id="aside3">了解我们</RouterLink>
+          <RouterLink to="/aside4" id="aside4">加入我们</RouterLink>
         </ul>
       </nav>
     </div>

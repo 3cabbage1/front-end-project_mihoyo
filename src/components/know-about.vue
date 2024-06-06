@@ -49,7 +49,9 @@ const handleMouseleft = (event) => {
   <div class="fp-page__wrap">
     <!-----轮播的选择---->
     <!-- <div class="swiper-container swiper-container-initialized swiper-container-vertical"> -->
-    <div class="home-about-cates">
+    <!-- <div class="home-about-cates flag" v-observe="active"> -->
+      <div class="home-about-cates" >
+      
       <div class="home-about-cates-wrap home-about-cates-wrap--active">
         <div class="home-about-cate">
           <div
@@ -111,7 +113,7 @@ const handleMouseleft = (event) => {
     </div>
 
     <!-- 内容 -->
-    <div class="home-about-container">
+    <div class="home-about-container" :class="{ 'flag1': this.$route.meta.direction=== 1 ,'flag_1':this.$route.meta.direction===-1}" v-observe="'active'">
       <div class="about-intro">
         <!-- 彩字部分 -->
         <div class="about-intro__vision">
@@ -167,13 +169,13 @@ const handleMouseleft = (event) => {
   position: relative;
 
   width: 100%;
-  background-color: #f8f9fb;
+  /* background-color: #f8f9fb; */
   height: 100%;
   font-family: 'Microsoft YaHei', 微软雅黑, 'MicrosoftJhengHei', PingFang, MingLiu, sans-serif;
 }
 .home-about {
   height: 100%;
-  background-color: #f8f9fb;
+  /* background-color: #f8f9fb; */
   width: 100%;
   overflow: hidden;
 }
@@ -283,19 +285,6 @@ const handleMouseleft = (event) => {
   transform: translateY(-0.6rem);
 }
 
-/* .home-about-cates-wrap::before,
-.home-about-cates-wrap::after {
-  /**用于在 .home-about-cates-wrap 元素的前后添加一个竖线 
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 1.5px;
-  height: 20px;
-  background: #707173;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-} */
 .home-about-cates-wrap::before {
   left: 0;
 }
@@ -377,7 +366,8 @@ const handleMouseleft = (event) => {
   transform-origin: 50% 50% -20px;
 }
 .btn-12 span:nth-child(2) {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #8394b50b;
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
@@ -386,19 +376,11 @@ const handleMouseleft = (event) => {
   transform-origin: 50% 50% -20px;
 }
 .btn-12:hover span:nth-child(1) {
-  /* box-shadow:
-    inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-    4px 4px 5px 0px rgba(0, 0, 0, 0.1); */
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
 .btn-12:hover span:nth-child(2) {
-  /* box-shadow:
-    inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-    4px 4px 5px 0px rgba(0, 0, 0, 0.1); */
   color: transparent;
   -webkit-transform: rotateX(-90deg);
   -moz-transform: rotateX(-90deg);
@@ -420,18 +402,6 @@ const handleMouseleft = (event) => {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-}
-.home-about-container {
-  -webkit-transition: -webkit-transform 800ms;
-  transition: -webkit-transform 800ms;
-  -o-transition: transform 800ms;
-  transition: transform 800ms;
-  transition:
-    transform 800ms,
-    -webkit-transform 800ms;
-  -webkit-transition-delay: 200ms;
-  -o-transition-delay: 200ms;
-  transition-delay: 200ms;
 }
 
 .about-intro {
@@ -600,16 +570,55 @@ const handleMouseleft = (event) => {
   font-weight: bold;
 }
 .fp-page__wrap {
-  background-color: #f8f9fb;
-
-  animation: mymove 1s;
+  background:
+	/* 水平条纹 */
+    -webkit-linear-gradient(
+      /*渐变方向:从上到下*/ top,
+      /*最开始背景色*/ #8394b50b 0,/* 背景色 */
+      /* 这几行用于控制网格线条粗细 */
+      /*到3.5px均背景色*/ #8394b50b 3.5px,
+      /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px, /* 线条色 */
+      /*以此类推*/ #8394b50b 4.7px,
+      #8394b50b 60px,
+      #4f689506 60px
+    ),
+    /* 垂直条纹 */ -webkit-linear-gradient(left, /*最开始背景色*/ #8394b50b 0,
+      /*到3.5px均背景色*/ #8394b50b 3.5px,
+      /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px,
+      /*以此类推*/ #8394b50b 4.7px,
+      #8394b50b 60px,
+      #4f689506 60px);
+/* 网格大小参数 */
+  -webkit-background-size: 20px 20px;
+  -moz-background-size: 20px 20px;
+  background-size: 20px 20px;
 }
-@keyframes mymove {
-  from {
-    bottom: -10rem;
-  }
-  to {
-    bottom: 0rem;
-  }
+
+.flag {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+  transform: translateY(-5%);
+}
+.flag1 {
+  
+  transition: all 1s;
+  transform: translateY(-10%);
+}
+.flag_1 {
+ 
+  transition: all 0.5s;
+  transform: translateY(10%);
+}
+.flag2 {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+  transform: translateY(5%);
+}
+.active {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
 </style>

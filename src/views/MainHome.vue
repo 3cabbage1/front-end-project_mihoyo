@@ -94,7 +94,6 @@ console.log(videoShow)
   }
 }
   position: absolute;
-  top: 50px;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -112,8 +111,8 @@ console.log(videoShow)
   .video {
     text-align: center;
     img {
-      width: 63px;
-      height: 33px;
+      width: 83px;
+      height: 43px;
       margin-top:30px;
     }
   }
@@ -122,8 +121,8 @@ console.log(videoShow)
     img {
       margin-top: 260px;
       margin-left: 40px;
-      width: 344px;
-      height: 221px;
+      width: 444px;
+      height: 271px;
     }
   }
 }
