@@ -48,10 +48,7 @@ const handleMouseleft = (event) => {
 <template>
   <div class="fp-page__wrap">
     <!-----轮播的选择---->
-    <!-- <div class="swiper-container swiper-container-initialized swiper-container-vertical"> -->
-    <!-- <div class="home-about-cates flag" v-observe="active"> -->
-      <div class="home-about-cates" >
-      
+    <div class="home-about-cates">
       <div class="home-about-cates-wrap home-about-cates-wrap--active">
         <div class="home-about-cate">
           <div
@@ -61,13 +58,9 @@ const handleMouseleft = (event) => {
             :class="{ 'home-about-cates-wrap--active': isActive }"
             style="transform: translateY(-0.6rem); transition-duration: 0ms"
           >
-            <!-- <div class="span-wrapper">
-              <span> 关于米哈游 </span>
-            </div> -->
             <div class="span-wrapper">
               <div class="tab-dark">关于米哈游</div>
             </div>
-            <!-- <div class="span-wrapper"><span> 关于米哈游 </span></div> -->
           </div>
         </div>
       </div>
@@ -82,38 +75,21 @@ const handleMouseleft = (event) => {
               style="transform: translateY(-0.6rem); transition-duration: 0ms"
             >
               <button class="custom-btn btn-12"><span>发展历程</span><span>发展历程</span></button>
-              <!-- <div class="span-wrapper"><span> 发展历程 </span></div>
-              <div class="span-wrapper">
-                <span class="tab-dark"> 发展历程 </span>
-              </div>
-              <div class="span-wrapper"><span> 发展历程 </span></div> -->
             </div>
           </div>
         </div></RouterLink
       ><RouterView />
-      <!-- <RouterLink to="/homehoner">
-        <div class="home-about-cates-wrap">
-          <div class="home-about-cate">
-            <div
-              class="home-about-cate-wrap"
-              @mouseover="handleMouseOver"
-              @mouseleave="handleMouseleft"
-              :class="{ 'home-about-cates-wrap--active': isActive }"
-              style="transform: translateY(-0.6rem); transition-duration: 0ms"
-            >
-              <div class="span-wrapper"><span> 荣誉资质 </span></div>
-              <div class="span-wrapper">
-                <span class="tab-dark"> 荣誉资质 </span>
-              </div>
-              <div class="span-wrapper"><span> 荣誉资质 </span></div>
-            </div>
-          </div>
-        </div> </RouterLink
-      ><RouterView /> -->
     </div>
 
     <!-- 内容 -->
-    <div class="home-about-container" :class="{ 'flag1': this.$route.meta.direction=== 1 ,'flag_1':this.$route.meta.direction===-1}" v-observe="'active'">
+    <div
+      class="home-about-container"
+      :class="{
+        flag1: this.$route.meta.direction === 1,
+        flag_1: this.$route.meta.direction === -1
+      }"
+      v-observe="'active'"
+    >
       <div class="about-intro">
         <!-- 彩字部分 -->
         <div class="about-intro__vision">
@@ -164,7 +140,9 @@ const handleMouseleft = (event) => {
 </template>
 
 <style scoped>
-/*header*/
+/* --------------------------------- */
+/* 整体页面 */
+/* --------------------------------- */
 .home {
   position: relative;
 
@@ -179,21 +157,22 @@ const handleMouseleft = (event) => {
   width: 100%;
   overflow: hidden;
 }
-
+/* --------------------------------- */
 /*左侧信息*/
+/* --------------------------------- */
 .aside-slogan[data-v-5dd2d15e] {
-  position: absolute;
-
+  position: absolute; /* 绝对定位 */
   left: 1rem;
   bottom: 7.38rem;
 }
+/* 左侧线部分 */
 .aside-slogan__line[data-v-5dd2d15e] {
-  position: absolute;
+  position: absolute; /* 绝对定位 */
   top: -13rem;
   left: -0.2rem;
   width: 10rem;
   height: 20.28rem;
-  background: url(./components/img/line.a3e37b6.png) no-repeat center center/100% 100%;
+  background: url(./components/img/line.a3e37b6.png) no-repeat center center/100% 100%; /* 背景图片 */
 }
 .aside-slogan__text[data-v-5dd2d15e] {
   position: relative;
@@ -202,7 +181,9 @@ const handleMouseleft = (event) => {
   z-index: 1;
   width: 0.4rem;
 }
+/* --------------------------------- */
 /*右侧 aboutus*/
+/* --------------------------------- */
 .home-about-decoration {
   position: absolute;
   top: 0.9rem;
@@ -230,15 +211,16 @@ const handleMouseleft = (event) => {
     transform 1500ms,
     -webkit-transform 1500ms;
 }
-
+/* --------------------------------- */
 /* home-about-cates */
+/* --------------------------------- */
 .home-about-cates {
-  display: -webkit-box;
+  display: -webkit-box; /* 采用flex布局 */
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
+  -webkit-box-pack: end; /* 内容右对齐 */
   justify-content: flex-end;
-  -webkit-box-align: center;
+  -webkit-box-align: center; /* 垂直居中对齐 */
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 10rem;
@@ -247,23 +229,12 @@ const handleMouseleft = (event) => {
   right: 160px;
   position: relative;
 }
-.home-about-cates {
-  -webkit-transition: -webkit-transform 800ms;
-  transition: -webkit-transform 800ms;
-  -o-transition: transform 800ms;
-  transition: transform 800ms;
-  transition:
-    transform 800ms,
-    -webkit-transform 800ms;
-  -webkit-transition-delay: 200ms;
-  -o-transition-delay: 200ms;
-  transition-delay: 200ms;
-}
+
 .home-about-cates-wrap {
   /**应用于子元素，用于包装关于米哈游的内容 */
   position: relative;
 
-  /* overflow: hidden; */ /**超出内容部分隐藏。 */
+  overflow: hidden; /**超出内容部分隐藏。 */
   margin-right: -1px;
   cursor: pointer; /*可以点击 */
 }
@@ -271,25 +242,6 @@ const handleMouseleft = (event) => {
   height: 20px;
   width: 120px;
   overflow: hidden;
-}
-.home-about-cate-wrap {
-  font-size: 0;
-  color: #676b73;
-  white-space: nowrap;
-  position: relative;
-  height: 20px;
-  width: 20px;
-
-  -webkit-transform: translateY(-0.6rem);
-  -ms-transform: translateY(-0.6rem);
-  transform: translateY(-0.6rem);
-}
-
-.home-about-cates-wrap::before {
-  left: 0;
-}
-.home-about-cates-wrap::after {
-  right: 0;
 }
 
 .home-about-cate .tab-dark {
@@ -310,19 +262,10 @@ const handleMouseleft = (event) => {
   position: relative;
   padding: 0 2rem;
 }
+/* 不点击的 */
 .home-about-cate .tab-dark {
   color: #fff;
   background: #3778e5;
-}
-.about-fade-enter-active,
-.about-fade-leave-active {
-  -webkit-transition: opacity 700ms;
-  -o-transition: opacity 700ms;
-  transition: opacity 700ms;
-}
-.about-fade-enter,
-.about-fade-leave-to {
-  opacity: 0;
 }
 
 .btn-12 {
@@ -356,6 +299,7 @@ const handleMouseleft = (event) => {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+/* 悬停时 */
 .btn-12 span:nth-child(1) {
   color: #f8f9fb;
   -webkit-transform: rotateX(90deg);
@@ -386,8 +330,9 @@ const handleMouseleft = (event) => {
   -moz-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
 }
-
+/* --------------------------------- */
 /*内容*/
+/* --------------------------------- */
 .home-about-container {
   position: relative;
   width: 1000px;
@@ -415,6 +360,7 @@ const handleMouseleft = (event) => {
 .about-intro__vision {
   max-height: 400px;
 }
+/* 大小标题 */
 .about-intro__vision-title,
 .about-intro__mihoyo-title {
   position: relative;
@@ -435,7 +381,9 @@ const handleMouseleft = (event) => {
   font-family: HarmonyOS, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
+
 /**彩字设置 */
+
 .about-intro__vision-slg {
   position: relative;
   display: inline-block;
@@ -569,31 +517,32 @@ const handleMouseleft = (event) => {
   color: #3778e5;
   font-weight: bold;
 }
+/* --------------------------------- */
+/* 背景 */
+/* --------------------------------- */
 .fp-page__wrap {
   background:
 	/* 水平条纹 */
     -webkit-linear-gradient(
       /*渐变方向:从上到下*/ top,
-      /*最开始背景色*/ #8394b50b 0,/* 背景色 */
-      /* 这几行用于控制网格线条粗细 */
-      /*到3.5px均背景色*/ #8394b50b 3.5px,
-      /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px, /* 线条色 */
-      /*以此类推*/ #8394b50b 4.7px,
+      /*最开始背景色*/ #8394b50b 0,
+      /* 背景色 */ /* 这几行用于控制网格线条粗细 */ /*到3.5px均背景色*/ #8394b50b 3.5px,
+      /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px,
+      /* 线条色 */ /*以此类推*/ #8394b50b 4.7px,
       #8394b50b 60px,
       #4f689506 60px
     ),
-    /* 垂直条纹 */ -webkit-linear-gradient(left, /*最开始背景色*/ #8394b50b 0,
-      /*到3.5px均背景色*/ #8394b50b 3.5px,
-      /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px,
-      /*以此类推*/ #8394b50b 4.7px,
-      #8394b50b 60px,
-      #4f689506 60px);
-/* 网格大小参数 */
+    /* 垂直条纹 */ -webkit-linear-gradient(left, /*最开始背景色*/ #8394b50b 0, /*到3.5px均背景色*/
+          #8394b50b 3.5px, /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px, /*以此类推*/ #8394b50b
+          4.7px, #8394b50b 60px, #4f689506 60px);
+  /* 网格大小参数 */
   -webkit-background-size: 20px 20px;
   -moz-background-size: 20px 20px;
   background-size: 20px 20px;
 }
-
+/* --------------------------------- */
+/* 上下滚动延迟 */
+/* --------------------------------- */
 .flag {
   opacity: 0;
   filter: blur(5px);
@@ -601,12 +550,10 @@ const handleMouseleft = (event) => {
   transform: translateY(-5%);
 }
 .flag1 {
-  
   transition: ease-out 0.6s;
   transform: translateY(20%);
 }
 .flag_1 {
- 
   transition: ease-out 0.6s;
   transform: translateY(-20%);
 }

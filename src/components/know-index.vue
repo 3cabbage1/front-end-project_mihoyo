@@ -23,7 +23,9 @@ import newTry2 from './know-about.vue'
 </template>
 
 <style scoped>
-/*header*/
+/* --------------------------------- */
+/* 页面 */
+/* --------------------------------- */
 .home {
   position: relative;
 
@@ -38,8 +40,9 @@ import newTry2 from './know-about.vue'
   overflow: hidden;
   /* background-color: #f8f9fb; */
 }
-
+/* --------------------------------- */
 /*左侧信息*/
+/* --------------------------------- */
 .aside-slogan[data-v-5dd2d15e] {
   position: absolute;
   left: -9.5rem;
@@ -60,7 +63,9 @@ import newTry2 from './know-about.vue'
   z-index: 1;
   width: 0.5rem;
 }
+/* --------------------------------- */
 /*右侧 aboutus*/
+/* --------------------------------- */
 .home-about-decoration {
   position: absolute;
 
@@ -71,7 +76,7 @@ import newTry2 from './know-about.vue'
   /* linear infinite */
   /* animation-play-state: paused; */
 }
-
+/* 右侧动画 */
 @keyframes mymove {
   /**动画 */
   from {
@@ -80,16 +85,5 @@ import newTry2 from './know-about.vue'
   to {
     right: 0rem;
   }
-}
-.flag {
-  opacity: 0;
-  filter: blur(5px);
-  transition: all 1s;
-  transform: translateY(-100%);
-}
-.active {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
 }
 </style>

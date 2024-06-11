@@ -43,22 +43,6 @@
                 </div>
               </div>
             </div>
-            <!-- <RouterLink to="/homehoner">
-              <div class="home-about-cates-wrap">
-                <div class="home-about-cate">
-                  <div
-                    class="home-about-cate-wrap"
-                    style="transform: translateY(-0.6rem); transition-duration: 0ms"
-                  >
-                    <div class="span-wrapper"><span> 荣誉资质 </span></div>
-                    <div class="span-wrapper">
-                      <span class="tab-dark"> 荣誉资质 </span>
-                    </div>
-                    <div class="span-wrapper"><span> 荣誉资质 </span></div>
-                  </div>
-                </div>
-              </div> </RouterLink
-            ><router-view></router-view> -->
           </div>
         </div>
         <!-- 中间展示页面 -->
@@ -253,21 +237,15 @@ import aside_slogan__line from '@/components/img/line.a3e37b6.png'
 
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/effect-fade'
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
 
-// import required modules
 import { EffectFade, Navigation, Pagination } from 'swiper/modules'
 import { onMounted, onUpdated, ref, watch } from 'vue'
 const modules = [EffectFade, Navigation, Pagination]
 
 const leftArrowChangeBg4 = ref()
-// 'https://uploadstatic.mihoyo.com/puzzle/upload/puzzle/2022/09/23/99f21ec58d52e7ebf0ec9d9f022d9d14_1589204872202004144.png'
 const rightArrowChangeBg4 = ref()
-// 'https://uploadstatic.mihoyo.com/puzzle/upload/puzzle/2022/09/23/f688748fd532d201b9f8810e275b0e3f_6877776947729540757.png'
 // JavaScript 代码
 document.addEventListener('DOMContentLoaded', function () {
   // 获取时间轴列表和切换按钮
@@ -343,13 +321,7 @@ const pagination = ref<any>({
 
     for (var i = start; i < end; i++) {
       // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
-      //   if (i === current - 1) {
-      //     // console.log("total:", current, total);
-      //     // paginationClick(i)
-      //     pag4inationActive(i - 1)
-      //   }
-      //   paginationHtml += `<span class="swiper-pagination-bullet">${i}</span>`
-      // // Adjust index to start from 1 instead of 0
+
       var pageIndex = i + 1
       // Check if the current index is the active one
       var isActive = i === current - 1
@@ -385,6 +357,9 @@ const pag4inationActive = (index: number) => {
 </script>
 
 <style scoped>
+/* --------------------------------- */
+/* 页面*/
+/* --------------------------------- */
 .home {
   position: relative;
   position: relative;
@@ -406,7 +381,9 @@ const pag4inationActive = (index: number) => {
   bottom: 150px;
   left: 100px;
 }
-
+/* --------------------------------- */
+/**标题 */
+/* --------------------------------- */
 .about-history-title {
   position: relative;
   left: 16%;
@@ -426,7 +403,9 @@ const pag4inationActive = (index: number) => {
   font-family: HarmonyOS, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
-
+/* --------------------------------- */
+/**轮播 */
+/* --------------------------------- */
 .swiper {
   left: 15%;
   top: 0rem;
@@ -497,9 +476,10 @@ const pag4inationActive = (index: number) => {
   z-index: 1;
   border: 1px solid #868686;
   cursor: pointer;
-  background-image: url('img/向右.png');
+  background-image: url('img/向右.png'); /**按钮背景 */
   background-size: cover; /* 可以根据需要调整尺寸 */
 }
+/**按下时的效果 */
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   background-color: #3778e5;
@@ -770,21 +750,17 @@ const pag4inationActive = (index: number) => {
 	/* 水平条纹 */
     -webkit-linear-gradient(
       /*渐变方向:从上到下*/ top,
-      /*最开始背景色*/ #8394b50b 0,/* 背景色 */
-      /* 这几行用于控制网格线条粗细 */
-      /*到3.5px均背景色*/ #8394b50b 3.5px,
-      /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px, /* 线条色 */
-      /*以此类推*/ #8394b50b 4.7px,
+      /*最开始背景色*/ #8394b50b 0,
+      /* 背景色 */ /* 这几行用于控制网格线条粗细 */ /*到3.5px均背景色*/ #8394b50b 3.5px,
+      /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px,
+      /* 线条色 */ /*以此类推*/ #8394b50b 4.7px,
       #8394b50b 60px,
       #4f689506 60px
     ),
-    /* 垂直条纹 */ -webkit-linear-gradient(left, /*最开始背景色*/ #8394b50b 0,
-      /*到3.5px均背景色*/ #8394b50b 3.5px,
-      /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px,
-      /*以此类推*/ #8394b50b 4.7px,
-      #8394b50b 60px,
-      #4f689506 60px);
-/* 网格大小参数 */
+    /* 垂直条纹 */ -webkit-linear-gradient(left, /*最开始背景色*/ #8394b50b 0, /*到3.5px均背景色*/
+          #8394b50b 3.5px, /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px, /*以此类推*/ #8394b50b
+          4.7px, #8394b50b 60px, #4f689506 60px);
+  /* 网格大小参数 */
   -webkit-background-size: 20px 20px;
   -moz-background-size: 20px 20px;
   background-size: 20px 20px;
