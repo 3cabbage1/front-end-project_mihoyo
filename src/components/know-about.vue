@@ -521,6 +521,14 @@ const handleMouseleft = (event) => {
 /* 背景 */
 /* --------------------------------- */
 .fp-page__wrap {
+   /* 背景基础设置 */
+   height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  position: fixed;
+  /* left: -10px; */
+  margin: 0;
+
   background:
 	/* 水平条纹 */
     -webkit-linear-gradient(

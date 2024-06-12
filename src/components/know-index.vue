@@ -8,7 +8,7 @@ import newTry2 from './know-about.vue'
   <div class="home">
     <div class="home-about fp-page">
       <img :src="home_about_decoration" class="home-about-decoration" v-lazy />
-      <div data-v-5dd2d15e="" class="aside-slogan aside-slogan">
+      <div data-v-5dd2d15e="" class="aside-slogan aside-slogan"  :class="{ 'flag1': this.$route.meta.direction=== 1 ,'flag_1':this.$route.meta.direction===-1}" v-observe="'active1'">
         <img data-v-5dd2d15e="" :src="aside_slogan__line" alt="miHoYo" class="aside-slogan__line" />
         <img
           data-v-5dd2d15e=""
@@ -86,4 +86,33 @@ import newTry2 from './know-about.vue'
     right: 0rem;
   }
 }
+<<<<<<< HEAD
+=======
+.flag {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+  transform: translateY(-100%);
+}
+.active {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+.flag1 {
+  
+  transition: ease-out 0.6s;
+  transform: translateY(20%);
+}
+.flag_1 {
+ 
+  transition: ease-out 0.6s;
+  transform: translateY(-35%);
+}
+.active1 {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+>>>>>>> 03db929 (feat:各功能细节完善)
 </style>

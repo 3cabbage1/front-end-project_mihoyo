@@ -38,7 +38,7 @@ methods:{
      
       this.$router.push('/aside'+this.routeIndex);
       }
-      },400)
+      },300)
     }
      // 向上滚动
     if(e.deltaY<0){
@@ -56,13 +56,13 @@ methods:{
       this.routeIndex--;
       this.$router.push('/aside'+this.routeIndex);
         }
-      },400)
+      },300)
     }
   }
 },
 watch:{
   // 监听路由
- $route(to){
+ $route(to, from){
   console.log(this.slide_direction);
  this.routeIndex=to.meta.index;//保证当前routeIndex就是当前渲染路由的index（从而保证通过导航栏点击跳转后routeIndex值不会出错）
  to.meta.direction=this.slide_direction;//更新组件滑动方向值
@@ -72,7 +72,15 @@ watch:{
  this.nav_show=false;
 else
 this.nav_show=true;
-}
+
+ //如果to索引大于from索引,判断为前进状态,反之则为后退状态
+ if(to.meta.index > from.meta.index){
+   //设置动画名称
+    this.transitionName = 'slide-left';
+   }else{
+    this.transitionName = 'slide-right';
+   }
+},
 
 }
 }
@@ -88,15 +96,19 @@ this.nav_show=true;
       <!-- 呈现一个带正确href属性的<a>标签 -->
       <nav v-if="nav_show">
         <ul>
+    
           <RouterLink to="/aside1" id="aside1">首页</RouterLink>
           <RouterLink to="/aside2" id="aside2">产品信息</RouterLink>
           <RouterLink to="/aside3" id="aside3">了解我们</RouterLink>
           <RouterLink to="/aside4" id="aside4">加入我们</RouterLink>
+   
         </ul>
       </nav>
     </div>
+    <!-- <transition :name="transitionName"> -->
     <!-- 路由出口，组件渲染到这里 -->
     <RouterView />
+  <!-- </transition> -->
   </header>
 </template>
 
@@ -111,6 +123,30 @@ nav {
   top: 0px;
 }
 
+/* .slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+ will-change: transform;
+ transition: all 500ms;
+ position: absolute;
+}
+.slide-right-enter {
+
+ transform: translateY(-30%);
+}
+.slide-right-leave-active {
+
+ transform: translateY(30%);
+}
+.slide-left-enter {
+
+ transform: translateY(30%);
+}
+.slide-left-leave-active {
+
+ transform: translateY(-30%);
+} */
 /* header {
   line-height: 1.5;
   max-height: 100vh;

@@ -14,7 +14,7 @@
         />
       </div>
      <!-- 线图标放中层 -->
-      <div id="back_layer2" style="position: relative;top:15px;" class="flag1" v-observe="'act1'">
+      <div id="back_layer2" style="position: relative;top:15px;" class="flag1" v-observe="'act1'" v-observe1="act11">
         <img
           id="line_left_bottom"
           alt="line"
@@ -853,6 +853,10 @@ bottom: -40vh;
   transition: all 0.6s;
   transform: translateY(300px);
 }
+/* .flag11 {
+  transition: all 0.6s;
+  transform: translateY(-300px);
+} */
 /* 右侧内容 */
 .flag2 {
   transition: ease-out 0.6s;
@@ -861,6 +865,10 @@ bottom: -40vh;
 /* 纵向 */
 .act1{
   transform: translateY(0%);
+}
+.act11{
+  transition: all 0.6s;
+  transform: translateY(30%);
 }
 /* 右上图标 */
 .flag_careers{
