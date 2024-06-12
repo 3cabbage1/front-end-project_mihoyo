@@ -5,7 +5,12 @@
    </div>
    <div class="iright">
      <div class="tit">
-      <span>隐私政策丨自律公约|廉政举报|联系我们丨关于我们</span>
+      <!-- 插入链接 -->
+      <a href="https://user.mihoyo.com/#/privacyAgreement"> 
+      <span>隐私政策</span>
+    </a>
+      <span> | </span>
+      <span>自律公约</span><span> | </span><span>廉政举报</span><span> | </span><span>联系我们</span><span> | </span><span>关于我们</span>
      </div>
      <div class="tit_">
       沪公网安备31010402001113号 |  增值电信业务经营许可证：沪B2-20190555              
@@ -49,5 +54,13 @@
       margin-bottom: 10px;
     }
   }
+}
+// 链接样式设置
+a{
+  color:#fff;
+  text-decoration-line: none;
+}
+a:hover{
+  text-decoration-line:underline;
 }
 </style>

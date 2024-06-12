@@ -86,8 +86,7 @@ import newTry2 from './know-about.vue'
     right: 0rem;
   }
 }
-<<<<<<< HEAD
-=======
+
 .flag {
   opacity: 0;
   filter: blur(5px);
@@ -114,5 +113,5 @@ import newTry2 from './know-about.vue'
   filter: blur(0);
   transform: translateY(0);
 }
->>>>>>> 03db929 (feat:各功能细节完善)
+
 </style>
