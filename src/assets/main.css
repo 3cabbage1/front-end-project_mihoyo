@@ -40,6 +40,7 @@ a,
   width: 100%;
   background-size: 100% 100%;
   position: absolute;
+  top:37px;/*导航栏位置*/
   margin: 0;
 
   background:
@@ -64,4 +65,7 @@ a,
   -webkit-background-size: 20px 20px;
   -moz-background-size: 20px 20px;
   background-size: 20px 20px;
+}
+body{
+  margin: 0!important;
 }

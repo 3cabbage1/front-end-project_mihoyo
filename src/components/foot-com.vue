@@ -85,7 +85,7 @@
   flex: 3;
   text-align: left;
   font-size: 14px;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 .links-section a {
@@ -101,7 +101,7 @@
 }
 
 .content-section {
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 14px;
 }
 

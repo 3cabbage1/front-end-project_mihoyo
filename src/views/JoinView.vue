@@ -838,6 +838,7 @@ color:rgb(100, 100, 100);
 /* 右上careers图标 */
 #careers{
 position: absolute;
+top:90px;
 right: 1rem;
 width: 10rem;
 }

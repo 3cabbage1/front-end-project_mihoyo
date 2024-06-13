@@ -46,7 +46,7 @@ const handleMouseleft = (event) => {
 </script>
 
 <template>
-  <div class="fp-page__wrap">
+  <div class="fp-page__wrap" style="margin-top: 70px;">
     <!-----轮播的选择---->
     <div class="home-about-cates">
       <div class="home-about-cates-wrap home-about-cates-wrap--active">
@@ -66,7 +66,7 @@ const handleMouseleft = (event) => {
       </div>
       <RouterLink to="/homehistory">
         <div class="home-about-cates-wrap">
-          <div class="home-about-cate">
+          <div class="home-about-cate" >
             <div
               class="home-about-cate-wrap"
               @mouseover="handleMouseOver"

@@ -7,7 +7,7 @@ import newTry2 from './know-about.vue'
 <template>
   <div class="home">
     <div class="home-about fp-page">
-      <img :src="home_about_decoration" class="home-about-decoration" v-lazy />
+      <img :src="home_about_decoration" class="home-about-decoration" v-lazy  style="margin-top: 80px;"/>
       <div data-v-5dd2d15e="" class="aside-slogan aside-slogan"  :class="{ 'flag1': this.$route.meta.direction=== 1 ,'flag_1':this.$route.meta.direction===-1}" v-observe="'active1'">
         <img data-v-5dd2d15e="" :src="aside_slogan__line" alt="miHoYo" class="aside-slogan__line" />
         <img

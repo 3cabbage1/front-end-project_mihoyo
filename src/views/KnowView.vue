@@ -13,6 +13,7 @@ import newTry from '../components/know-index.vue'
   </main>
 </template>
 <style>
+
 .flag {
   opacity: 0;
   filter: blur(5px);
