@@ -1,14 +1,15 @@
 <template>
-  <div class="bdgrid"> <!-- Add the bdgrid class here -->
-    <iframe :src="src" frameborder="0" style="width: 100%; height: 100vh"></iframe>
+  <!-- 添加切页动画指令，并根据切入前的页面路由大小判断切入方向 -->
+  <div class="bdgrid1" :class="{ 'flag1': this.$route.meta.direction=== 1 ,'flag_1':this.$route.meta.direction===-1}" v-observe="'active1'"> <!-- 添加 bdgrid 类 -->
+    <iframe :src="src" frameborder="0" style="width: 100%; height: 100vh" ></iframe>
     <div id="catch_mouth"></div>
 
     <div id="app">
       <div class="icons-container">
-        <div v-for="icon in icons" :key="icon.id" class="icon" :style="{ backgroundImage: 'url(' + icon.iconUrl + ')' }" @click="showDetail(icon)"></div>
+        <div v-for="icon in icons" :key="icon.id" class="icon" :style="{ backgroundImage: 'url(' + icon.iconUrl + ')' }" @click="showDetail(icon)" ></div>
       </div>
-
       <div id="detail" v-if="selectedIcon">
+       
         <div class="image-container">
           <img :src="selectedIcon.backgroundImage" class="background-image" alt="背景图片">
           <img :src="selectedIcon.foregroundImage" class="foreground-image" alt="产品图片">
@@ -23,10 +24,10 @@
             <div class="links">
               <a :href="selectedIcon.links.game" target="_blank">游戏官网</a>
               <a :href="selectedIcon.links.weibo" target="_blank">微博</a>
-              <a href="#" @mouseover="showQrCode(selectedIcon.qrCode)" @mouseout="hideQrCode">微信公众号</a>
+              <a href="#" @mouseover="showQrCode(selectedIcon.qrCode, $event)" @mouseout="hideQrCode">微信公众号</a>
               <a :href="selectedIcon.links.bilibili" target="_blank">Bilibili</a>
             </div>
-            <img v-if="showingQrCode" :src="qrCodeImage" class="qr-code" alt="二维码">
+            <img v-if="showingQrCode" :src="qrCodeImage" class="qr-code" :style="{ top: qrCodeTop + 'px', left: qrCodeLeft + 'px' }" alt="二维码">
           </div>
         </div>
       </div>
@@ -163,6 +164,8 @@ export default {
       selectedIcon: null,
       showingQrCode: false,
       qrCodeImage: '',
+      qrCodeTop: 0,
+      qrCodeLeft: 0,
       autoSwitchTimer: null
     };
   },
@@ -172,26 +175,43 @@ export default {
       this.$nextTick(() => {
         const foregroundImage = document.querySelector('.foreground-image');
         const titleImage = document.querySelector('.title-image');
+        const description = document.querySelector('.description');
 
         if (foregroundImage) {
+          
           foregroundImage.classList.remove('slide-in');
           // 强制重绘，使得每次添加类时都能触发动画
           void foregroundImage.offsetWidth;
-          foregroundImage.classList.add('slide-in');
+          setTimeout(() => {
+            foregroundImage.classList.add('slide-in');
+          }, 0);
         }
 
         if (titleImage) {
           titleImage.classList.remove('slide-in-right');
           // 强制重绘，使得每次添加类时都能触发动画
           void titleImage.offsetWidth;
-          titleImage.classList.add('slide-in-right');
+          setTimeout(() => {
+            titleImage.classList.add('slide-in-right');
+          }, 0);
+        }
+
+        if (description) {
+          description.classList.remove('slide-in-right');
+          // 强制重绘，使得每次添加类时都能触发动画
+          void description.offsetWidth;
+          setTimeout(() => {
+            description.classList.add('slide-in-right');
+          }, 0);
         }
 
         document.getElementById('detail').style.display = 'flex';
       });
     },
-    showQrCode(qrCode) {
+    showQrCode(qrCode, event) {
       this.qrCodeImage = qrCode;
+      this.qrCodeTop = event.target.getBoundingClientRect().bottom - 40;
+      this.qrCodeLeft = event.target.getBoundingClientRect().left;
       this.showingQrCode = true;
     },
     hideQrCode() {
@@ -202,7 +222,7 @@ export default {
         const currentIndex = this.icons.findIndex(icon => icon === this.selectedIcon);
         const nextIndex = (currentIndex + 1) % this.icons.length;
         this.showDetail(this.icons[nextIndex]);
-      }, 3000); // Change interval to 3000ms (3 seconds)
+      }, 3000); // 切换间隔改为3000毫秒（3秒）
     },
     stopAutoSwitch() {
       if (this.autoSwitchTimer) {
@@ -212,7 +232,7 @@ export default {
     }
   },
   mounted() {
-    this.showDetail(this.icons[0]); // Show the detail of the first icon by default
+    this.showDetail(this.icons[0]); // 默认显示第一个图标的详细信息
     this.startAutoSwitch();
   },
   beforeUnmount() {
@@ -292,44 +312,41 @@ export default {
   height: 220px;
 }
 
-/* existing styles */
-
 .foreground-image {
   position: relative;
   z-index: 2;
   width: 1100px;
   height: 620px;
   max-width: 100%;
-  opacity: 0; /* Start hidden */
-  transition: transform 1s ease-out, opacity 1s ease-out; /* Slide in and fade in animation */
+  opacity: 0; /* 初始状态隐藏 */
+  transition: transform 1s ease-out, opacity 1s ease-out; /* 滑入和淡入动画 */
 }
 
 .slide-in {
   transform: translateX(0);
-  opacity: 1; /* Make visible */
+  opacity: 1; /* 变为可见 */
 }
 
-/* Initial state off-screen to the left */
+/* 初始状态在屏幕左侧外 */
 .foreground-image:not(.slide-in) {
   transform: translateX(-100%);
 }
 
 .title-image {
   width: 100%;
-  opacity: 0; /* Start hidden */
-  transition: transform 1s ease-out, opacity 1s ease-out; /* Slide in and fade in animation */
+  opacity: 0; /* 初始状态隐藏 */
+  transition: transform 1s ease-out, opacity 1s ease-out; /* 滑入和淡入动画 */
 }
 
 .slide-in-right {
   transform: translateX(0);
-  opacity: 1; /* Make visible */
+  opacity: 1; /* 变为可见 */
 }
 
-/* Initial state off-screen to the right */
+/* 初始状态在屏幕右侧外 */
 .title-image:not(.slide-in-right) {
   transform: translateX(100%);
 }
-
 
 .title-image-container {
   position: absolute;
@@ -354,6 +371,18 @@ export default {
   box-sizing: border-box;
   text-align: right;
   margin-top: auto;
+  opacity: 0; /* 初始状态隐藏 */
+  transition: transform 1s ease-out, opacity 1s ease-out; /* 滑入和淡入动画 */
+}
+
+.description.slide-in-right {
+  transform: translateX(0);
+  opacity: 1; /* 变为可见 */
+}
+
+/* 初始状态在屏幕右侧外 */
+.description:not(.slide-in-right) {
+  transform: translateX(100%);
 }
 
 .links {
@@ -422,17 +451,34 @@ export default {
 }
 
 /* 网格背景 */
-.bdgrid {
+.bdgrid1 {
   /* 背景基础设置 */
   height: 100%;
   width: 100%;
   background-size: 100% 100%;
-  position: absolute;
+  position: fixed;
   /* left: -10px; */
   margin: 0;
+ 
+ 
+}
+/* 切页动画 */
+.flag1 {
+  transition: ease-out 0.6s;
+  transform: translateY(30%);
+}
+.flag_1 {
+ transition: ease-out 0.6s;
+ transform: translateY(-30%);
+}
+.active1 {
+ transform: translateY(0);
+}
+/* 背景网格 */
 
+#detail{
   background:
-    /* 水平条纹 */
+	/* 水平条纹 */
     -webkit-linear-gradient(
       /*渐变方向:从上到下*/ top,
       /*最开始背景色*/ #8394b50b 0,/* 背景色 */
@@ -443,15 +489,13 @@ export default {
       #8394b50b 60px,
       #4f689506 60px
     ),
-    /* 垂直条纹 */
-    -webkit-linear-gradient(left, /*最开始背景色*/ #8394b50b 0,
+    /* 垂直条纹 */ -webkit-linear-gradient(left, /*最开始背景色*/ #8394b50b 0,
       /*到3.5px均背景色*/ #8394b50b 3.5px,
       /*到4.3px过渡为浅蓝色线条色*/ #576e971c 4.1px,
       /*以此类推*/ #8394b50b 4.7px,
       #8394b50b 60px,
       #4f689506 60px);
-
-  /* 网格大小参数 */
+/* 网格大小参数 */
   -webkit-background-size: 20px 20px;
   -moz-background-size: 20px 20px;
   background-size: 20px 20px;
