@@ -3,7 +3,7 @@
   <div class="bdgrid" >
     <!-- 左下背景图标 -->
     <div id="back_icon">
-      <!-- 框背景放下层 -->
+      <!-- 星空框背景放下层 -->
       <div id="back_layer1" class= 'flag1' v-observe="'act1'">
         <img
           id="stars-background"
@@ -333,10 +333,6 @@ data(){
   }
 },
 methods:{
-  mounted(){
-    console.log("开始");
-    this.updateSlideStyle();
-  },
   // 招聘图标背景动画
 backleave1(){
   this.is_back_leave1=true;
@@ -375,35 +371,7 @@ handleMouseMove(event) {
     this.imageStyle2.transform = `${translateX2} `;
     this.imageStyle3.transform = `${translateX3} `;
   },
-  // updateSlideStyle() {
-  //   console.log("up_direction:",this.$route.meta.direction);
-  //   clearTimeout(this.timer);
-  //   if(this.$route.meta.direction===1){
-  //     const translateY = `translateY(${-100}vh`;
-  //     this.bdgridStyle.transform=`${translateY} `;
-  //     console.log("向上动");
-  //   }
-  //   if(this.$route.meta.direction===-1){
-  //     const translateY = `translateY(${100}vh`;
-  //     this.bdgridStyle.transform=`${translateY} `;
-  //     console.log("向下动");
-  //   }
-  //   this.timer=setTimeout(()=>{
-  //     this.$route.meta.direction=0;
-  //   },100);
-
-  // }
-},
-watch:{
-//   direction() {
-//     direction=this.$route.meta.direction,
-//     console.log("direction:",this.$route.meta.direction);
-//     if(this.$route.meta.direction!=0){
-//   this.updateSlideStyle();
-//     }
-// },
 }
-
 }
 </script>
 
@@ -424,7 +392,7 @@ position:absolute;
 bottom:-30px;
 top:88px;
 }
-/* 框背景层 */
+/* 星空框背景层 */
 #back_layer1{
 position:absolute;
 top:247px;

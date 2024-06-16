@@ -31,10 +31,8 @@
                       alt="认证图2" /> </a>
               <a target="_blank" href="https://www.12377.cn/"><img src="../assets/youhai_1589857356_1416.png"
                       alt="认证图3" /></a>
-              <a target="_blank"
-                  href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/8955A9DDE1FF8B6CE053010A14ACA87F">
-                  <img src="../assets/culture_1575020039_5478.png" alt="认证图4" /></a>
-              <a href="#"><img src="../assets/e110_1575020039_7486.png" alt="认证图5" /></a>
+                  <img src="../assets/culture_1575020039_5478.png" alt="认证图4" />
+              <img src="../assets/e110_1575020039_7486.png" alt="认证图5" />
               <a href="https://wap.scjgj.sh.gov.cn/businessCheck/verifKey.do?showType=extShow&serial=9031000020190314100540000004452331-SAIC_SHOW_310000-20200120150237277642&signData=MEYCIQCjn9IhIKfUHjPlx9W6xrYPZ4GA73Blopwp0iEzSX0OHQIhAOZm3tnlWLrgVXMtvgp5OibauIgiAa+2d+MQ7qzMIm6t"
                   target="_blank">
                   <img src="../assets/zhizhao_1575020039_4362.png" alt="认证图6" /></a>
