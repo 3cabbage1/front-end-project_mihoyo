@@ -21,7 +21,7 @@ export default {
           path: '/aside3'
         },
         {
-          name: '产品信息',
+          name: '加入我们',
           path: '/aside4'
         }
       ],
